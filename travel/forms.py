@@ -1,4 +1,3 @@
-"""Forms for the server-rendered auth flow."""
 from __future__ import annotations
 
 from django import forms
