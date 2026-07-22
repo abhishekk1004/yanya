@@ -1,26 +1,9 @@
-"""Offline evaluation of the content-based recommender.
-
-The pipeline is deliberately DB-independent so it runs with no network and no
-migrations: it works on plain (place, category-vector) records and (user, place,
-rating) triples. A real Kaggle *tourism* dataset can be fed in by mapping its
-type/category column onto the six CATEGORY_KEYS via ``CATEGORY_MAP``; the
-synthetic generator below emits the identical schema so the same code path runs
-offline.
-
-Metrics reported:
-  * RMSE / MAE of predicted vs held-out ratings (model vs a mean-rating baseline).
-  * Recall@K of held-out liked items (model vs a random-ranking baseline).
-"""
 from __future__ import annotations
-
 from dataclasses import dataclass, field
-
 import numpy as np
 
 from .constants import CATEGORY_INDEX, CATEGORY_KEYS, NUM_CATEGORIES
 
-# Map raw Kaggle "type/category" strings onto our six category keys. Extend as
-# needed for the specific dataset; unmapped values contribute nothing.
 CATEGORY_MAP: dict[str, str] = {
     "adventure": "adventure", "wildlife": "adventure", "safari": "adventure",
     "rafting": "adventure", "paragliding": "adventure",
@@ -40,13 +23,12 @@ CATEGORY_MAP: dict[str, str] = {
 class Place:
     place_id: int
     name: str
-    vector: np.ndarray  # length NUM_CATEGORIES
+    vector: np.ndarray  
 
 
 @dataclass
 class Dataset:
     places: dict[int, Place]
-    # ratings[user_id] = list of (place_id, rating)
     ratings: dict[int, list[tuple[int, float]]] = field(default_factory=dict)
 
 
@@ -59,12 +41,6 @@ def vector_from_categories(raw: dict[str, float]) -> np.ndarray:
 
 
 def load_csv(places_path: str, ratings_path: str) -> Dataset:
-    """Load a Kaggle-style tourism dataset into a Dataset.
-
-    ``places.csv`` needs at least ``place_id, name, category``; the free-text
-    ``category`` is mapped onto a one-hot six-vector via CATEGORY_MAP.
-    ``ratings.csv`` needs ``user_id, place_id, rating``. O(rows).
-    """
     import csv
 
     places: dict[int, Place] = {}
@@ -97,16 +73,11 @@ def _cosine(a: np.ndarray, b: np.ndarray) -> float:
 def synth_dataset(
     n_places: int = 60, n_users: int = 120, ratings_per_user: int = 15, seed: int = 42
 ) -> Dataset:
-    """Generate a synthetic dataset with the canonical schema.
 
-    Each place gets a sparse nonnegative category vector; each user gets a latent
-    taste vector and rates a random subset of places as 1 + 4·cos(taste, place)
-    plus noise (clipped to 1–5). Time/space: O(users × ratings_per_user).
-    """
     rng = np.random.default_rng(seed)
     places = {}
     for pid in range(n_places):
-        # Sparse vector: pick 1–3 dominant categories.
+      
         vec = np.zeros(NUM_CATEGORIES)
         for idx in rng.choice(NUM_CATEGORIES, size=rng.integers(1, 4), replace=False):
             vec[idx] = rng.uniform(0.4, 1.0)
@@ -129,7 +100,7 @@ def synth_dataset(
 
 
 def _split(user_ratings: list[tuple[int, float]], rng, test_frac=0.2):
-    """80/20 split of one user's ratings into (train, test)."""
+
     idx = np.arange(len(user_ratings))
     rng.shuffle(idx)
     n_test = max(1, int(len(idx) * test_frac))
@@ -140,10 +111,6 @@ def _split(user_ratings: list[tuple[int, float]], rng, test_frac=0.2):
 
 
 def _taste_from_train(train, places: dict[int, Place]) -> np.ndarray:
-    """Rating-weighted average of rated place vectors — the training taste.
-
-    This mirrors the app's behavioural_taste(). O(len(train) × C).
-    """
     acc = np.zeros(NUM_CATEGORIES)
     total = 0.0
     for pid, rating in train:
@@ -162,16 +129,11 @@ class Metrics:
     random_recall_at_k: float
     k: int
     n_users: int
-    n_train: int = 0   # rating rows used for training (~80%)
-    n_test: int = 0    # rating rows held out for testing (~20%)
-
+    n_train: int = 0   
+    n_test: int = 0    
 
 def _predict(place_vec, train, places, user_mean):
-    """Content/item-KNN prediction: cosine-similarity-weighted average of the
-    user's own training ratings. Calibrates to the user's rating scale, so it
-    beats a global-mean baseline. Falls back to the user's mean when no trained
-    item is similar. O(len(train) × C).
-    """
+
     num = den = 0.0
     for pid, rating in train:
         sim = max(0.0, _cosine(place_vec, places[pid].vector))
@@ -182,12 +144,6 @@ def _predict(place_vec, train, places, user_mean):
 
 
 def evaluate(data: Dataset, k: int = 5, seed: int = 0) -> Metrics:
-    """Run the 80/20 evaluation and return metrics.
-
-    Rating prediction and candidate ranking both use the content/item-KNN score
-    above. Baselines: global mean for RMSE/MAE, random ranking for Recall@K.
-    Time: O(users × test × train × C + users × places × train × C).
-    """
     rng = np.random.default_rng(seed)
     global_mean = float(
         np.mean([r for rs in data.ratings.values() for _, r in rs]) or 3.0
@@ -206,7 +162,7 @@ def evaluate(data: Dataset, k: int = 5, seed: int = 0) -> Metrics:
         n_test_total += len(test)
         user_mean = float(np.mean([r for _, r in train])) if train else global_mean
 
-        # --- Rating prediction (RMSE/MAE) on held-out items ---
+        
         for pid, actual in test:
             pred = _predict(data.places[pid].vector, train, data.places, user_mean)
             sq_err += (pred - actual) ** 2
@@ -214,8 +170,6 @@ def evaluate(data: Dataset, k: int = 5, seed: int = 0) -> Metrics:
             base_sq += (global_mean - actual) ** 2
             base_abs += abs(global_mean - actual)
             n_pred += 1
-
-        # --- Recall@K of held-out liked items (rating >= 4) ---
         liked = {pid for pid, r in test if r >= 4}
         if liked:
             trained_ids = {pid for pid, _ in train}
