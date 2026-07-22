@@ -34,8 +34,7 @@ from .serializers import (
     UserSerializer,
 )
 
-# Prefetch that pulls each destination's feature vector in one extra query,
-# keeping vector reads off the N+1 path (perf requirement).
+
 _WEIGHTS_PREFETCH = Prefetch(
     "category_weights",
     queryset=DestinationCategory.objects.select_related("category"),
@@ -54,7 +53,6 @@ def _bump_reco_version(user_id: int) -> None:
     cache.set(key, cache.get(key, 0) + 1)
 
 
-# --- Accounts --------------------------------------------------------------
 class SignupView(generics.CreateAPIView):
 
 
