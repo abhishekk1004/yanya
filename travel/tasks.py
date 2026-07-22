@@ -1,8 +1,3 @@
-"""Celery tasks: nightly popularity refresh and behavioural-taste rebuild.
-
-Both run eagerly (synchronously) in dev when no Redis broker is configured, so
-they can be invoked directly in tests and management commands too.
-"""
 from __future__ import annotations
 
 import math
@@ -17,12 +12,6 @@ from .recommender import rebuild_behavioural_for_user
 
 @shared_task
 def refresh_popularity() -> int:
-    """Recompute every destination's popularity from its 'popular' feature
-    weight blended with a log-scaled interaction signal, normalised to 0–100.
-
-    Complexity: O(D) with a single grouped query for interaction counts.
-    Returns the number of destinations updated.
-    """
     counts = {
         row["id"]: row
         for row in Destination.objects.values("id").annotate(
@@ -54,7 +43,6 @@ def refresh_popularity() -> int:
 
 @shared_task
 def rebuild_behavioural_taste() -> int:
-    """Persist each active user's behavioural taste vector. O(users × interactions)."""
     User = get_user_model()
     users = User.objects.filter(interactions__isnull=False).distinct()
     n = 0
