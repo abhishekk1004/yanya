@@ -1,36 +1,21 @@
-"""Itinerary optimiser: order selected destinations into a minimum-cost,
-budget-feasible route.
-
-Cost model: travel cost between two points is their great-circle (haversine)
-distance × COST_PER_KM; a route's total is the sum of its leg travel costs plus
-the visit cost of each included destination. We build the order with a
-nearest-neighbour heuristic, improve it with 2-opt, and — if the total busts the
-budget — greedily drop the stop whose removal saves the most, re-optimising each
-time.
-
-Complexity: distance matrix O(n²·C=1); nearest-neighbour O(n²); one 2-opt pass
-O(n²) and it converges in a few passes for the small n a traveller selects.
-"""
 from __future__ import annotations
-
 import math
 from dataclasses import dataclass, field
 
-COST_PER_KM = 12.0  # NPR per km of ground travel (approx.)
-
+COST_PER_KM = 15.0  
 
 @dataclass
 class Point:
-    id: int          # destination id (or -1 for a virtual start)
+    id: int         
     lat: float
     lng: float
-    visit_cost: int  # NPR; 0 for a virtual start point
+    visit_cost: int  
 
 
 @dataclass
 class OptimizedRoute:
-    order: list[int]              # destination ids in visit order (excl. start)
-    leg_costs: list[int]         # NPR travel cost to reach each ordered stop
+    order: list[int]              
+    leg_costs: list[int]         
     travel_cost_npr: int
     visit_cost_npr: int
     total_cost_npr: int
@@ -38,7 +23,6 @@ class OptimizedRoute:
 
 
 def haversine_km(a: Point, b: Point) -> float:
-    """Great-circle distance in km between two points. O(1)."""
     r = 6371.0
     p1, p2 = math.radians(a.lat), math.radians(b.lat)
     dphi = math.radians(b.lat - a.lat)
@@ -48,7 +32,6 @@ def haversine_km(a: Point, b: Point) -> float:
 
 
 def cost_matrix(points: list[Point]) -> list[list[float]]:
-    """Symmetric n×n travel-cost matrix (NPR). O(n²)."""
     n = len(points)
     m = [[0.0] * n for _ in range(n)]
     for i in range(n):
@@ -59,12 +42,11 @@ def cost_matrix(points: list[Point]) -> list[list[float]]:
 
 
 def _route_travel(order: list[int], m: list[list[float]]) -> float:
-    """Total leg travel cost of visiting indices in `order`. O(n)."""
+
     return sum(m[order[i]][order[i + 1]] for i in range(len(order) - 1))
 
 
 def nearest_neighbour(m: list[list[float]], start: int = 0) -> list[int]:
-    """Greedy nearest-neighbour tour (open path) from `start`. O(n²)."""
     n = len(m)
     unvisited = set(range(n))
     unvisited.discard(start)
@@ -79,11 +61,6 @@ def nearest_neighbour(m: list[list[float]], start: int = 0) -> list[int]:
 
 
 def two_opt(order: list[int], m: list[list[float]]) -> list[int]:
-    """Improve an open path by reversing segments while it lowers travel cost.
-
-    Keeps index 0 fixed (the start). Repeats passes until no improving swap is
-    found. Each pass is O(n²); returns a route whose cost is ≤ the input's.
-    """
     best = order[:]
     improved = True
     while improved:
@@ -105,14 +82,6 @@ def _optimise_order(points: list[Point], start_idx: int) -> list[int]:
 def optimize(
     points: list[Point], budget_npr: int | None = None, start_index: int = 0
 ) -> OptimizedRoute:
-    """Return a minimum-cost, budget-feasible route over `points`.
-
-    `points[start_index]` is the fixed origin; if it is a virtual start (id -1,
-    visit_cost 0) it is not reported as a stop. When the total (travel + visits)
-    exceeds `budget_npr`, drop the stop whose removal saves the most and
-    re-optimise, until feasible or only the start remains. O(n³) worst case for
-    the drop loop (n small).
-    """
     working = points[:]
     start_id = points[start_index].id
     dropped: list[int] = []
@@ -132,7 +101,7 @@ def optimize(
 
     travel, visits, total = totals(order_idx, m, working)
 
-    # Drop stops that bust the budget, most-saving first.
+
     while budget_npr is not None and total > budget_npr and len(working) > 1:
         best_removal, best_saving = None, -1.0
         for p in working:
@@ -151,7 +120,7 @@ def optimize(
         order_idx, m, _ = build(working)
         travel, visits, total = totals(order_idx, m, working)
 
-    # Assemble the result, excluding a virtual start from reported stops.
+
     ordered_points = [working[i] for i in order_idx]
     leg_costs: list[int] = []
     stop_ids: list[int] = []
@@ -160,7 +129,7 @@ def optimize(
         leg = 0.0 if prev is None else haversine_km(prev, p) * COST_PER_KM
         prev = p
         if p.id == start_id and p.visit_cost == 0 and p.id == -1:
-            continue  # virtual start: not a stop
+            continue  
         stop_ids.append(p.id)
         leg_costs.append(round(leg))
 
