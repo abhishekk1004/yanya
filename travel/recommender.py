@@ -1,18 +1,3 @@
-"""Content-based recommender.
-
-Design (deliberately lean — no user×destination matrix):
-  * Each destination is a vector over the six CATEGORY_KEYS (its weighted
-    DestinationCategory rows).
-  * A user's taste is a single 6-vector: their explicit quiz weights blended
-    with a behavioural vector (the rating-weighted average of destinations they
-    liked). Behaviour is weighted more as interactions accumulate, so a
-    brand-new user falls back cleanly to their quiz weights (cold start).
-  * Candidates are scored by cosine similarity to the taste vector, after hard
-    filters (budget / difficulty / season / province) and hiding visited places.
-
-Complexity: building the taste vector is O(interactions × C); scoring is one
-matrix–vector product, O(D × C), where C = 6 categories. No dense N×M matrix.
-"""
 from __future__ import annotations
 
 from dataclasses import dataclass
@@ -22,7 +7,6 @@ import numpy as np
 from .constants import CATEGORY_INDEX, NUM_CATEGORIES
 from .models import Destination, Interaction, UserPreference
 
-# Implicit "liking" strength per event type, used to weight behavioural taste.
 EVENT_SIGNAL = {
     Interaction.SAVE: 3.0,
     Interaction.VISITED: 4.0,
@@ -38,7 +22,6 @@ class Scored:
 
 
 def category_vector(dest: Destination) -> np.ndarray:
-    """The destination's feature vector over CATEGORY_KEYS. O(C)."""
     vec = np.zeros(NUM_CATEGORIES, dtype=float)
     for cw in dest.category_weights.all():
         idx = CATEGORY_INDEX.get(cw.category.key)
@@ -48,7 +31,6 @@ def category_vector(dest: Destination) -> np.ndarray:
 
 
 def destinations_with_vectors(queryset) -> tuple[list[Destination], np.ndarray]:
-    """Materialise a candidate queryset into (destinations, D×C matrix). O(D×C)."""
     dests = list(queryset.prefetch_related("category_weights__category"))
     if not dests:
         return [], np.zeros((0, NUM_CATEGORIES))
@@ -57,7 +39,6 @@ def destinations_with_vectors(queryset) -> tuple[list[Destination], np.ndarray]:
 
 
 def explicit_taste(pref: UserPreference) -> np.ndarray:
-    """The quiz weights as a fixed-order 6-vector. O(C)."""
     vec = np.zeros(NUM_CATEGORIES, dtype=float)
     for key, idx in CATEGORY_INDEX.items():
         vec[idx] = float(pref.weights.get(key, 0.0))
@@ -65,11 +46,6 @@ def explicit_taste(pref: UserPreference) -> np.ndarray:
 
 
 def behavioural_taste(user) -> tuple[np.ndarray, int]:
-    """Rating-weighted average of the vectors of destinations the user liked.
-
-    Returns (vector, n_signals). RATE events are weighted by their rating;
-    SAVE/VISITED/VIEW by a fixed implicit signal. O(interactions × C).
-    """
     interactions = (
         Interaction.objects.filter(user=user)
         .select_related("destination")
@@ -80,7 +56,7 @@ def behavioural_taste(user) -> tuple[np.ndarray, int]:
     n_signals = 0
     for it in interactions:
         if it.event == Interaction.RATE and it.rating:
-            weight = float(it.rating)  # 1–5: higher rating pulls harder
+            weight = float(it.rating)  
         else:
             weight = EVENT_SIGNAL.get(it.event, 0.0)
         if weight <= 0:
@@ -94,11 +70,8 @@ def behavioural_taste(user) -> tuple[np.ndarray, int]:
 
 
 def blended_taste(user) -> np.ndarray:
-    """Blend explicit + behavioural taste, weighting behaviour more with data.
 
-    alpha = n / (n + K): 0 at cold start (pure quiz weights), → 1 as the user
-    interacts. O(interactions × C).
-    """
+    #alpha = n / (n + K): 0 at cold start (pure quiz weights)
     pref, _ = UserPreference.objects.get_or_create(user=user)
     explicit = explicit_taste(pref)
     behaviour, n = behavioural_taste(user)
@@ -117,7 +90,6 @@ def _cosine(matrix: np.ndarray, taste: np.ndarray) -> np.ndarray:
 
 
 def candidate_queryset(user, province: str | None = None, season: str | None = None):
-    """Apply hard filters and hide already-visited places. O(D) in SQL."""
     pref, _ = UserPreference.objects.get_or_create(user=user)
     qs = Destination.objects.select_related("province")
     qs = qs.filter(cost_npr__lte=pref.budget_npr)
@@ -138,11 +110,6 @@ def candidate_queryset(user, province: str | None = None, season: str | None = N
 def recommend(
     user, province: str | None = None, top_n: int = 10, season: str | None = None
 ) -> list[Scored]:
-    """Top-N content-based recommendations for `user`.
-
-    Falls back to popularity ordering when the taste vector is all-zero (a user
-    who neither took the quiz nor interacted). O(interactions × C + D×C).
-    """
     dests, matrix = destinations_with_vectors(
         candidate_queryset(user, province=province, season=season)
     )
@@ -158,7 +125,6 @@ def recommend(
 
 
 def rebuild_behavioural_for_user(user) -> None:
-    """Persist a user's behavioural taste onto their preference (nightly job)."""
     vec, n = behavioural_taste(user)
     pref, _ = UserPreference.objects.get_or_create(user=user)
     pref.behavioural_weights = {
