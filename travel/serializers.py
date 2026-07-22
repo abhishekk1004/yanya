@@ -1,7 +1,8 @@
-"""DRF serializers. Kept thin — shaping only, no business logic."""
+
 from __future__ import annotations
 
 from django.contrib.auth import get_user_model
+from django.contrib.auth.base_user import AbstractBaseUser
 from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 
@@ -18,8 +19,6 @@ from .models import (
 
 User = get_user_model()
 
-
-# --- Accounts --------------------------------------------------------------
 class SignupSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True, validators=[validate_password])
 
@@ -52,7 +51,6 @@ class PreferenceSerializer(serializers.ModelSerializer):
         read_only_fields = ("updated_at",)
 
     def validate_weights(self, value: dict) -> dict:
-        """Coerce weights to the full CATEGORY_KEYS space, clamped to [0, 1]."""
         if not isinstance(value, dict):
             raise serializers.ValidationError("weights must be an object.")
         cleaned: dict[str, float] = {}
@@ -74,9 +72,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ("id", "username", "email", "profile", "preference")
 
 
-# --- Catalog ---------------------------------------------------------------
 class CategoryWeightSerializer(serializers.Serializer):
-    """Flattens a destination's DestinationCategory rows into {key: weight}."""
 
     def to_representation(self, destination: Destination) -> dict[str, float]:
         return {cw.category.key: cw.weight for cw in destination.category_weights.all()}
@@ -95,12 +91,10 @@ class DestinationSerializer(serializers.ModelSerializer):
         )
 
     def get_category_weights(self, obj: Destination) -> dict[str, float]:
-        # Relies on prefetch_related('category_weights__category') at the view.
         return {cw.category.key: round(cw.weight, 3) for cw in obj.category_weights.all()}
 
 
 class InteractionSerializer(serializers.ModelSerializer):
-    """Write-only-ish: user + destination come from the URL / request."""
 
     class Meta:
         model = Interaction
@@ -118,7 +112,6 @@ class InteractionSerializer(serializers.ModelSerializer):
 
 
 class SpotSerializer(serializers.ModelSerializer):
-    """Lean destination shape for map markers."""
 
     class Meta:
         model = Destination
@@ -141,12 +134,10 @@ class ProvinceWithSpotsSerializer(ProvinceSerializer):
         fields = ProvinceSerializer.Meta.fields + ("spots",)
 
     def get_spots(self, obj: Province) -> list[dict]:
-        # Relies on a prefetched, sliced `famous_spots` attribute set in the view.
         spots = getattr(obj, "famous_spots", obj.destinations.all())
         return SpotSerializer(spots, many=True).data
 
 
-# --- Itineraries -----------------------------------------------------------
 class ItineraryStopSerializer(serializers.ModelSerializer):
     destination = SpotSerializer(read_only=True)
 
