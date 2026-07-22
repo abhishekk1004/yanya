@@ -6,4 +6,4 @@ class TravelConfig(AppConfig):
     name = 'travel'
 
     def ready(self):
-        from . import signals  # noqa: F401  (register post_save handlers)
+        from . import signals 
