@@ -1,9 +1,4 @@
-"""HTMX / server-rendered page views. The browser app uses Django session auth;
-the JSON API additionally accepts JWT. Data is read straight from the ORM with
-select_related/prefetch_related to keep vector reads off the N+1 path.
-"""
 from __future__ import annotations
-
 from django.contrib import messages
 from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
