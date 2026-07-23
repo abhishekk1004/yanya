@@ -7,6 +7,7 @@ from django.contrib.auth.password_validation import validate_password
 from rest_framework import serializers
 
 from .constants import CATEGORY_KEYS
+from .media import icon_for
 from .models import (
     Destination,
     Interaction,
@@ -87,11 +88,18 @@ class DestinationSerializer(serializers.ModelSerializer):
         fields = (
             "id", "name", "slug", "province", "province_name", "description",
             "lat", "lng", "cost_npr", "difficulty", "best_season", "popularity",
-            "is_featured", "category_weights",
+            "is_featured", "image_url", "category_weights",
         )
 
     def get_category_weights(self, obj: Destination) -> dict[str, float]:
         return {cw.category.key: round(cw.weight, 3) for cw in obj.category_weights.all()}
+
+
+class _IconMixin:
+    def get_icon(self, obj) -> str:
+        keys = [cw.category.key for cw in
+                sorted(obj.category_weights.all(), key=lambda c: c.weight, reverse=True)]
+        return icon_for(obj.name, keys)
 
 
 class InteractionSerializer(serializers.ModelSerializer):
@@ -111,11 +119,13 @@ class InteractionSerializer(serializers.ModelSerializer):
         return attrs
 
 
-class SpotSerializer(serializers.ModelSerializer):
+class SpotSerializer(_IconMixin, serializers.ModelSerializer):
+    icon = serializers.SerializerMethodField()
 
     class Meta:
         model = Destination
-        fields = ("id", "name", "slug", "lat", "lng", "popularity")
+        fields = ("id", "name", "slug", "lat", "lng", "popularity", "image_url",
+                  "cost_npr", "icon")
 
 
 class ProvinceSerializer(serializers.ModelSerializer):
@@ -123,7 +133,7 @@ class ProvinceSerializer(serializers.ModelSerializer):
         model = Province
         fields = (
             "id", "name", "slug", "order", "center_lat", "center_lng",
-            "boundary_geojson",
+            "boundary_geojson", "cover_url",
         )
 
 
