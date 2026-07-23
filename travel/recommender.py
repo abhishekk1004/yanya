@@ -12,7 +12,7 @@ EVENT_SIGNAL = {
     Interaction.VISITED: 4.0,
     Interaction.VIEW: 0.5,
 }
-BLEND_K = 8.0  # behaviour reaches half-weight after this many signalled events
+BLEND_K = 8.0  
 
 
 @dataclass
@@ -71,7 +71,7 @@ def behavioural_taste(user) -> tuple[np.ndarray, int]:
 
 def blended_taste(user) -> np.ndarray:
 
-    #alpha = n / (n + K): 0 at cold start (pure quiz weights)
+    #alpha = n / (n + K): 0 at cold start 
     pref, _ = UserPreference.objects.get_or_create(user=user)
     explicit = explicit_taste(pref)
     behaviour, n = behavioural_taste(user)
@@ -119,6 +119,26 @@ def recommend(
     if np.linalg.norm(taste) == 0:
         ranked = sorted(dests, key=lambda d: d.popularity, reverse=True)
         return [Scored(d, d.popularity) for d in ranked[:top_n]]
+    scores = _cosine(matrix, taste)
+    order = np.argsort(-scores)[:top_n]
+    return [Scored(dests[i], float(scores[i])) for i in order]
+
+
+def similar_destinations(destination_ids, top_n: int = 6, exclude_ids=None) -> list[Scored]:
+
+    base = list(
+        Destination.objects.filter(id__in=destination_ids)
+        .prefetch_related("category_weights__category")
+    )
+    if not base:
+        return []
+    taste = np.mean([category_vector(d) for d in base], axis=0)
+    excluded = set(destination_ids) | set(exclude_ids or [])
+    dests, matrix = destinations_with_vectors(
+        Destination.objects.exclude(id__in=excluded).select_related("province")
+    )
+    if not dests or np.linalg.norm(taste) == 0:
+        return []
     scores = _cosine(matrix, taste)
     order = np.argsort(-scores)[:top_n]
     return [Scored(dests[i], float(scores[i])) for i in order]
