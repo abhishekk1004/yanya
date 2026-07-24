@@ -1,0 +1,61 @@
+place_id,name,province,category,cost_npr,difficulty,best_season,lat,lng
+0,Place 0,Koshi,adventure,93000,4,summer,29.4344,85.5789
+1,Place 1,Madhesh,heritage,13000,3,winter,29.0446,86.2885
+2,Place 2,Bagmati,hill station,17000,5,summer,27.4832,87.4141
+3,Place 3,Gandaki,trek,77000,3,winter,27.7737,81.8179
+4,Place 4,Lumbini,adventure,67000,5,all,29.3105,85.0533
+5,Place 5,Karnali,adventure,91000,4,spring,29.8828,87.145
+6,Place 6,Sudurpashchim,trek,93000,4,all,27.8669,80.3504
+7,Place 7,Koshi,hill station,20000,4,autumn,28.979,87.7401
+8,Place 8,Madhesh,temple,40000,5,spring,27.8782,81.5158
+9,Place 9,Bagmati,temple,17000,4,summer,26.9076,85.3585
+10,Place 10,Gandaki,city,53000,1,winter,28.8011,82.4989
+11,Place 11,Lumbini,trek,100000,3,winter,27.5499,82.3066
+12,Place 12,Karnali,heritage,82000,4,all,26.7996,80.0589
+13,Place 13,Sudurpashchim,trek,94000,4,autumn,28.8207,86.2458
+14,Place 14,Koshi,hill station,56000,3,summer,26.5592,80.9162
+15,Place 15,Madhesh,temple,80000,4,summer,28.2609,86.12
+16,Place 16,Bagmati,hill station,76000,3,summer,28.2368,82.4316
+17,Place 17,Gandaki,hill station,5000,2,summer,26.8583,83.2682
+18,Place 18,Lumbini,city,102000,1,spring,26.2332,82.2511
+19,Place 19,Karnali,city,36000,3,autumn,28.2281,86.2712
+20,Place 20,Sudurpashchim,city,80000,3,summer,29.2561,81.3358
+21,Place 21,Koshi,temple,4000,1,all,28.8894,83.695
+22,Place 22,Madhesh,trek,21000,5,summer,26.6092,85.5706
+23,Place 23,Bagmati,temple,54000,1,spring,27.206,85.0423
+24,Place 24,Gandaki,hill station,44000,5,all,26.472,87.6952
+25,Place 25,Lumbini,temple,109000,3,autumn,27.0635,87.7534
+26,Place 26,Karnali,heritage,93000,2,autumn,27.7974,82.1779
+27,Place 27,Sudurpashchim,adventure,13000,3,winter,27.8231,81.6189
+28,Place 28,Koshi,trek,38000,5,summer,26.7071,86.8529
+29,Place 29,Madhesh,adventure,91000,3,autumn,27.7284,85.0185
+30,Place 30,Bagmati,adventure,70000,1,autumn,26.3378,83.3265
+31,Place 31,Gandaki,trek,6000,1,summer,27.3194,81.1562
+32,Place 32,Lumbini,trek,14000,1,summer,26.6824,87.401
+33,Place 33,Karnali,city,70000,3,spring,28.3637,80.1824
+34,Place 34,Sudurpashchim,adventure,115000,3,summer,29.1309,80.6618
+35,Place 35,Koshi,heritage,59000,4,summer,29.7513,84.5738
+36,Place 36,Madhesh,hill station,57000,5,spring,27.3263,84.1654
+37,Place 37,Bagmati,city,53000,2,all,29.3052,87.1693
+38,Place 38,Gandaki,hill station,18000,2,summer,26.4343,85.3779
+39,Place 39,Lumbini,adventure,35000,2,autumn,28.908,86.1492
+40,Place 40,Karnali,heritage,14000,4,winter,26.9209,80.2993
+41,Place 41,Sudurpashchim,adventure,67000,3,spring,29.3192,86.466
+42,Place 42,Koshi,city,39000,2,winter,27.1637,84.1205
+43,Place 43,Madhesh,city,32000,5,winter,26.6584,80.3593
+44,Place 44,Bagmati,heritage,53000,5,winter,29.5667,85.9889
+45,Place 45,Gandaki,city,107000,2,winter,28.0754,82.5274
+46,Place 46,Lumbini,adventure,93000,2,autumn,27.4946,80.7557
+47,Place 47,Karnali,trek,90000,2,spring,29.7473,81.9278
+48,Place 48,Sudurpashchim,adventure,16000,1,winter,26.6131,81.4341
+49,Place 49,Koshi,temple,72000,4,winter,26.7857,82.4826
+50,Place 50,Madhesh,city,93000,2,winter,28.003,81.1512
+51,Place 51,Bagmati,city,3000,1,spring,26.5273,85.4213
+52,Place 52,Gandaki,city,16000,2,summer,28.777,84.6489
+53,Place 53,Lumbini,temple,25000,5,winter,28.8616,85.9119
+54,Place 54,Karnali,trek,17000,3,all,29.7103,83.1806
+55,Place 55,Sudurpashchim,city,37000,1,summer,28.6515,87.645
+56,Place 56,Koshi,hill station,35000,5,winter,26.0994,84.4416
+57,Place 57,Madhesh,adventure,76000,5,all,26.5614,83.3529
+58,Place 58,Bagmati,adventure,116000,1,summer,29.7321,86.4349
+59,Place 59,Gandaki,temple,57000,4,autumn,26.0713,80.8732
