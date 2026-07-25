@@ -1,0 +1,941 @@
+place_id,name,province,category,kind,cost_npr,lat,lng,elevation_m
+4158622990,Barchet Bomotang -1,Bagmati,hiking,viewpoint,0,28.005851,85.105925,
+4243026503,Barudkhana,Bagmati,hiking,viewpoint,0,27.682569,85.410312,
+4144009690,Bojepokhari,Bagmati,hiking,viewpoint,0,27.66485,85.348731,
+4158627593,Bomotang 'Potere Bann'(jungal),Bagmati,hiking,viewpoint,0,27.996939,85.097747,
+4243017315,Chandika house,Bagmati,hiking,viewpoint,0,27.628242,85.520743,
+9054229743,Chulevir Viewpoint,Bagmati,hiking,viewpoint,0,27.933305,84.668036,
+4243030036,Dandipakha,Bagmati,hiking,viewpoint,0,27.682023,85.408941,
+9557617018,Dhulikhel Zipline,Bagmati,hiking,viewpoint,0,27.62491,85.575136,
+3477345600,Dhungsel Jharna,Bagmati,hiking,waterfall,100,28.180129,85.13542,
+13724324901,Fung Funge Jharana,Bagmati,hiking,waterfall,100,27.829179,85.220192,
+10833741289,Gam Dhoka Park,Bagmati,hiking,viewpoint,0,27.717063,85.426139,
+3616498898,Ganga Jamuna,Bagmati,hiking,waterfall,100,28.088385,84.914829,
+4214721489,Ghale Bhanjyang,Bagmati,hiking,viewpoint,0,27.884563,85.334354,
+4115481689,Gurje Bhanjyang(गुर्जे),Bagmati,hiking,viewpoint,0,27.813554,85.315592,
+5565961322,Halkhoria,Bagmati,hiking,viewpoint,0,27.202151,85.080812,
+10564467432,Jharana,Bagmati,hiking,waterfall,100,27.532911,84.853262,
+4424529690,Kakani View Point,Bagmati,hiking,viewpoint,0,27.813925,85.269628,
+11704284575,Latarameshwor Mahadev,Bagmati,hiking,viewpoint,0,27.470198,85.220861,
+4158627594,Lungpacget 'Shyong '(River ),Bagmati,hiking,viewpoint,0,27.99028,85.095096,
+11189720237,Mohini Waterfall,Bagmati,hiking,waterfall,100,27.602839,85.145931,
+6021110385,Noesagang,Bagmati,hiking,viewpoint,0,28.162106,85.385964,
+4158627693,Nuwakot Districts,Bagmati,hiking,viewpoint,0,27.911241,85.144148,
+10105843123,Nyauli Waterfall,Bagmati,hiking,waterfall,100,28.192275,84.872385,
+2365593755,Pharping View Point,Bagmati,hiking,viewpoint,0,27.612382,85.28809,
+4158627595,Ralu,Bagmati,hiking,viewpoint,0,27.981619,85.095424,
+4235620291,Rames,Bagmati,hiking,viewpoint,0,27.674967,85.387072,
+4243029634,Shakhal Basti,Bagmati,hiking,viewpoint,0,27.678179,85.407476,
+4127963199,Shree Ram Pati,Bagmati,hiking,viewpoint,0,27.634107,85.637473,
+5602334821,Star Banquet and Party Palace,Bagmati,hiking,viewpoint,0,27.716559,85.32585,
+4213646591,Surya Chaur,Bagmati,hiking,viewpoint,0,27.823206,85.31057,
+1932766564,Viewpoint from Deurali Pass,Bagmati,hiking,viewpoint,0,27.581743,86.33016,
+10046814462,Viewtower,Bagmati,hiking,viewpoint,0,28.109259,85.344093,
+4158627692,Wati bley,Bagmati,hiking,viewpoint,0,27.989867,85.097635,
+2041489293,White house,Bagmati,hiking,viewpoint,0,27.65163,85.268679,
+4208482893,bakenswara,Bagmati,hiking,viewpoint,0,27.960445,84.675176,
+4340567491,bhaudhoka,Bagmati,hiking,viewpoint,0,27.728102,85.461694,
+4348451709,chhyabasti,Bagmati,hiking,viewpoint,0,27.717294,85.468359,
+13518656001,overhanging deck viewpoint of Kathmandu valley & Himalayas,Bagmati,hiking,viewpoint,0,27.65456,85.229,
+4305409889,pokharidanda,Bagmati,hiking,viewpoint,0,27.962101,84.675715,
+4157626091,ram kumar family's house,Bagmati,hiking,viewpoint,0,27.633256,85.320081,
+4292367994,salinadi hydropower,Bagmati,hiking,viewpoint,0,27.747817,85.481129,
+6938699285,धण्टा-धर,Bagmati,hiking,viewpoint,0,27.707467,85.316843,
+6795495985,मजुवा फाँट,Bagmati,hiking,viewpoint,0,27.901421,85.084407,
+1966018536,रानीबन,Bagmati,hiking,viewpoint,0,27.745211,85.26688,
+4590416991,सुशानको घर,Bagmati,hiking,viewpoint,0,27.646152,85.357361,
+1842725717,Art Of Living Centre,Bagmati,historic,monument,150,27.690037,85.334439,
+1945544350,Arun Thapa Chok,Bagmati,historic,monument,150,27.680859,85.310293,
+2905131436,Bag Khor,Bagmati,historic,monument,150,27.676808,86.075883,
+2905131437,Bag Khor,Bagmati,historic,monument,150,27.681419,86.069295,
+2218533779,Bedakopari Chaitya,Bagmati,historic,monument,150,27.671863,85.332345,
+3577277381,Bhanu Bhakta Statue,Bagmati,historic,monument,150,27.707872,85.314271,
+2901364742,Bhimsen Dobar,Bagmati,historic,monument,150,27.677538,86.075669,
+1974298499,Bichari Pati,Bagmati,historic,monument,150,27.59478,85.520247,
+3877763908,Big Bell,Bagmati,historic,monument,150,27.722015,85.36213,
+2019707026,Birendra Batika,Bagmati,historic,monument,150,27.74341,85.333272,
+11934802170,Brass & Bronze Museum,Bagmati,historic,museum,300,27.673721,85.435587,
+10959561216,Buddha Akshobya,Bagmati,historic,monument,150,27.7155,85.290347,
+575610468,Buddha Chok,Bagmati,historic,monument,150,27.430993,85.031931,
+2202917311,Buddha Pokhari,Bagmati,historic,monument,150,27.612097,85.319996,
+4401481355,Bungamati Museum,Bagmati,historic,museum,300,27.628867,85.302443,
+10224826020,Cattle Shed Ruins,Bagmati,historic,monument,150,28.216079,85.592098,
+2901364744,Chakra Dobar,Bagmati,historic,monument,150,27.675879,86.073491,
+6499243432,Changu Museum,Bagmati,historic,museum,300,27.716517,85.429241,
+10564423310,Chepang Museuw,Bagmati,historic,museum,300,27.547635,84.844299,
+4321058000,Chhauni,Bagmati,historic,monument,150,27.646121,85.357138,
+2084372303,Chunni Devi,Bagmati,historic,monument,150,27.719253,85.33082,
+2066253623,DUBAR SQUARE PATAN,Bagmati,historic,monument,150,27.673148,85.324795,
+9871425646,Dabu (Dance Platform),Bagmati,historic,monument,150,27.672117,85.427766,
+2230601510,Depressed stone icon,Bagmati,historic,monument,150,27.673806,85.325749,
+2218533761,Dhanya Rasya Kriti Chaitya,Bagmati,historic,monument,150,27.671327,85.332541,
+2097740384,Garuda Statue,Bagmati,historic,monument,150,27.673598,85.325062,
+5617218438,Ghale Raja Palace,Bagmati,historic,monument,150,28.177899,85.301668,
+4071313801,Ghataraj Salik Chok,Bagmati,historic,monument,150,27.732227,85.359412,
+7765273342,Gopi Maharjan Saalik,Bagmati,historic,monument,150,27.702275,85.304191,
+4533176868,Hyumat,Bagmati,historic,monument,150,27.699409,85.303957,
+1783303872,Jyapu samaj,Bagmati,historic,museum,300,27.6737,85.331953,
+2071315788,Kanti Rajya Laxmi Devi Shah,Bagmati,historic,monument,150,27.73253,85.328416,
+1962909336,Keshar Mahal,Bagmati,historic,monument,150,27.714698,85.314299,
+1966285198,King Tribhuvan Statue,Bagmati,historic,monument,150,27.693798,85.314136,
+2097740385,King Yog Narendra Malla Column,Bagmati,historic,monument,150,27.673293,85.325017,
+2905131444,Kirat Stambha,Bagmati,historic,monument,150,27.677351,86.075169,
+2195513966,Kobha Pukhu,Bagmati,historic,monument,150,27.6313,85.521965,
+10005589867,LHO HITI:,Bagmati,historic,monument,150,27.63297,85.493307,
+4208543591,Lakhan Thapa,Bagmati,historic,monument,150,27.94804,84.67664,
+2202902560,Late Laxmi Prasad Devkota,Bagmati,historic,monument,150,27.680788,85.283297,
+1942507475,Lion statue,Bagmati,historic,monument,150,27.672104,85.42898,
+9655535677,Lyaku Museum,Bagmati,historic,museum,300,27.679414,85.275236,
+3307485463,Maka dya,Bagmati,historic,monument,150,27.678172,85.278086,
+984624859,Mani wall,Bagmati,historic,monument,150,28.216379,85.513636,
+9725866768,Manjushree,Bagmati,historic,monument,150,27.661114,85.293663,
+4208420190,Mars,Bagmati,historic,monument,150,27.693062,85.340915,
+9756720714,Martyrs Memorial,Bagmati,historic,monument,150,27.677599,85.27524,
+10046401406,Memorial,Bagmati,historic,monument,150,28.132771,85.353742,
+10057772854,Memorial for Mr. Mindul Tamang,Bagmati,historic,monument,150,28.091791,85.381694,
+1317084932,Milan Chok Stop,Bagmati,historic,monument,150,27.695048,85.340662,
+4280992095,My Nana's Home,Bagmati,historic,monument,150,27.071673,85.083033,
+2164874168,Narayanhiti Palace Museum,Bagmati,historic,museum,300,27.714896,85.318103,
+2901364786,Nashwar Dobar,Bagmati,historic,monument,150,27.676837,86.076349,
+2224398921,Obelsiks at Jhyatapole,Bagmati,historic,monument,150,27.675714,85.325041,
+3498367331,Old Dharahara Remains,Bagmati,historic,monument,150,27.700609,85.311869,
+1420156237,Panauti Museum,Bagmati,historic,museum,300,27.585009,85.517131,
+3074580748,Pashupati Bhandareshore,Bagmati,historic,monument,150,27.712285,85.338813,
+2901364790,Pingal Dobar,Bagmati,historic,monument,150,27.676496,86.07536,
+2905131449,Pukhurcha Pahara,Bagmati,historic,monument,150,27.678497,86.073737,
+4345059191,Punya Chetra,Bagmati,historic,monument,150,27.46275,84.996231,
+5158778300,Ramkot Durbar,Bagmati,historic,monument,150,27.912055,84.858259,
+2128612807,Respected Martyars Sukra Raj Sastri,Bagmati,historic,monument,150,27.683442,85.318815,
+1875597201,Royal Mahendra Museum,Bagmati,historic,museum,300,27.704121,85.307762,
+2194109114,Rudrabarna Mahabihar,Bagmati,historic,monument,150,27.668222,85.327232,
+2905131451,Saharpadeu-Sarachiya Lunga,Bagmati,historic,monument,150,27.678669,86.072622,
+2166426558,Sahid Sukraraj Brikshya,Bagmati,historic,monument,150,27.696267,85.307036,
+3307481394,Sankhadhar saalik,Bagmati,historic,monument,150,27.679041,85.27647,
+2977157106,Shahid Smarak,Bagmati,historic,monument,150,27.442605,84.999467,
+1919864427,Shalik,Bagmati,historic,monument,150,27.669998,85.281284,
+3294328568,Shankhardhar Shakwa,Bagmati,historic,monument,150,27.6759,85.280176,
+2084372330,Siddhi Ganesh,Bagmati,historic,monument,150,27.71924,85.330858,
+11058074676,Simulation Science Center,Bagmati,historic,museum,300,27.667842,85.28649,
+2097690553,Statue of Ganesh,Bagmati,historic,monument,150,27.672787,85.325013,
+2097690554,Statue of Ganga,Bagmati,historic,monument,150,27.672921,85.325137,
+2097690555,Statue of Hanuman,Bagmati,historic,monument,150,27.672743,85.325,
+2097690556,Statue of Jamuna,Bagmati,historic,monument,150,27.6729,85.325229,
+2097690557,Statue of Narsingha,Bagmati,historic,monument,150,27.672833,85.325025,
+2060240290,Statue of Sleeping Narayan,Bagmati,historic,monument,150,27.6766,85.431298,
+11345538456,Stefan Sluka,Bagmati,historic,monument,150,28.442318,85.776102,
+1143907504,Sukedhara Tap,Bagmati,historic,monument,150,27.727384,85.345303,
+2905131452,Sundhara,Bagmati,historic,monument,150,27.67737,86.075196,
+2194086510,Sundhara stone spout,Bagmati,historic,monument,150,27.669694,85.328082,
+2224398919,Swotha Jhya,Bagmati,historic,monument,150,27.675108,85.3255,
+2901365404,Tasicha Dobar,Bagmati,historic,monument,150,27.676715,86.074951,
+4208543689,Thani Mai,Bagmati,historic,monument,150,27.958479,84.675081,
+567142203,Tharu Cultural Museum,Bagmati,historic,museum,300,27.581435,84.508493,
+567142207,Tharu Cultural Museum,Bagmati,historic,museum,300,27.582372,84.507543,
+2852782177,The City Museum Kathmandu,Bagmati,historic,museum,300,27.711014,85.318259,
+4104754291,Triveni Ghat (त्रिवेणी घाट),Bagmati,historic,monument,150,27.861742,85.326869,
+1801257243,"chapache sana guthi,chabahal",Bagmati,historic,monument,150,27.676683,85.319467,
+1417964988,lamo patti,Bagmati,historic,monument,150,27.585486,85.514796,
+3189982098,nktpa,Bagmati,historic,monument,150,27.727404,85.365344,
+2054092038,कैलाशनाथ महादेव मूर्ति / Kailashnath Mahadev Statue,Bagmati,historic,monument,150,27.646144,85.474109,
+3307488696,ख्यली दाया,Bagmati,historic,monument,150,27.67987,85.27489,
+4115481889,त्रिवेणी घाट,Bagmati,historic,monument,150,27.861739,85.326902,
+11201472668,पृथ्वीनारायण शाह,Bagmati,historic,monument,150,27.610265,85.56795,
+11197512002,बलभद्र कुँवर,Bagmati,historic,monument,150,27.608895,85.56555,
+4215259889,राईगाउँ सहीदगेट,Bagmati,historic,monument,150,27.214247,85.486868,
+4476159389,विद्यागणेश,Bagmati,historic,monument,150,27.681793,85.386511,
+3489694998,शंखधर शाख्वा,Bagmati,historic,monument,150,27.673487,85.385278,
+4218539989,हातीढुङ्गा(Hattidhunga),Bagmati,historic,monument,150,27.219464,85.481711,
+13011561359,Ancient Banjahity Stone Tap,Bagmati,popular,attraction,200,27.705537,85.305516,
+4340563298,Barpipal,Bagmati,popular,attraction,200,27.632709,85.389419,
+12291429901,Bhajyu Pukhu,Bagmati,popular,attraction,200,27.670594,85.420929,
+7418881885,Bhitiharwa (Champaran) Gandhi Ashram,Bagmati,popular,attraction,200,27.238714,84.489463,
+6313767447,Budhanikantha entry gate,Bagmati,popular,attraction,200,27.776884,85.362218,
+13245331601,Cani Gate,Bagmati,popular,attraction,200,28.489445,85.041292,
+11397080162,Canoe Tours departure,Bagmati,popular,attraction,200,27.575064,84.492439,
+8009598335,Changunarayan,Bagmati,popular,attraction,200,27.716226,85.428356,
+4104680094,Chanpako Bot (चाँपाबोट),Bagmati,popular,attraction,200,27.839015,85.314402,
+4115482189,Chanpko Bot(चाँपाबोट ),Bagmati,popular,attraction,200,27.839014,85.314421,
+5639050621,Cheese Factory,Bagmati,popular,attraction,200,28.110797,85.339583,
+4352711189,Chilime Hydropower Plant headworks,Bagmati,popular,attraction,200,28.181217,85.305615,
+5803936554,City motorbike,Bagmati,popular,attraction,200,27.711856,85.309867,
+4285982489,Club Galaxy,Bagmati,popular,attraction,200,27.691228,85.277848,
+12288007901,Cremation Site,Bagmati,popular,attraction,200,27.668279,85.430726,
+12290225101,Cremation Site,Bagmati,popular,attraction,200,27.669325,85.434702,
+4344434292,Dey Pukhu,Bagmati,popular,attraction,200,27.636002,85.298203,
+9849553431,Dhulikhel Viral Stone View Point,Bagmati,popular,attraction,200,27.611017,85.568894,
+10068876014,Dhungedhara,Bagmati,popular,attraction,200,27.674715,85.385027,
+4104400789,Dumre Phat,Bagmati,popular,attraction,200,27.863739,85.309063,
+567151136,Elephant Riding,Bagmati,popular,attraction,200,27.59437,84.481466,
+5252097841,Elephants,Bagmati,popular,attraction,200,27.573281,84.501306,
+4121409191,Er. Abeey Poudel Flat,Bagmati,popular,attraction,200,27.749295,85.339763,
+4370635890,Florid human resources,Bagmati,popular,attraction,200,27.690977,85.332097,
+5280998726,Gankhu dharamapur dol,Bagmati,popular,attraction,200,27.68612,85.394766,
+13245320102,Gho village,Bagmati,popular,attraction,200,28.478,85.01258,
+4582351699,Go Kart,Bagmati,popular,attraction,200,27.678798,85.302695,
+9366440993,Heaven Himalaya,Bagmati,popular,attraction,200,27.719407,85.305058,
+4325931190,International Green Developers Nepal,Bagmati,popular,attraction,200,27.667091,85.442811,
+4344434603,Jitapur Gandhakuti Vihar,Bagmati,popular,attraction,200,27.635437,85.299475,
+1936280991,Jyapu Niwas,Bagmati,popular,attraction,200,27.682567,85.335059,
+11845003093,KGH Dream Garden,Bagmati,popular,attraction,200,27.715049,85.309404,
+4344434491,Khaa Pukhu,Bagmati,popular,attraction,200,27.636243,85.30053,
+4656145192,Lama Nivas,Bagmati,popular,attraction,200,27.423868,85.039997,
+5009767235,Nagpokhari,Bagmati,popular,attraction,200,27.713488,85.324369,
+10081035120,Nigu Pukhu,Bagmati,popular,attraction,200,27.678356,85.385638,
+4309250491,Noyel House,Bagmati,popular,attraction,200,27.673572,85.345256,
+4115449791,Pokhari Chaur(पोखरीचौर),Bagmati,popular,attraction,200,27.851003,85.317302,
+12287948902,Pottery Square (Talako Tole),Bagmati,popular,attraction,200,27.669897,85.427743,
+6807710417,Rani Pokhari,Bagmati,popular,attraction,200,27.707811,85.315315,
+4476183189,Scarf of life,Bagmati,popular,attraction,200,27.711274,85.312222,
+3944316658,Shankhapura Paragliding Take off site,Bagmati,popular,attraction,200,27.775143,85.501957,
+10081035119,Siwa Tole,Bagmati,popular,attraction,200,27.677749,85.386721,
+9447489417,Siwangi Pradhan,Bagmati,popular,attraction,200,27.716903,85.331411,
+6052389400,Socialtours Hub,Bagmati,popular,attraction,200,27.713693,85.312416,
+12916877756,Stone spout,Bagmati,popular,attraction,200,27.676511,85.319175,
+4655964191,Sundar Adhikari's Home,Bagmati,popular,attraction,200,27.385616,85.090539,
+12289963601,Thanthu Dubar,Bagmati,popular,attraction,200,27.672334,85.428487,
+4348472318,Trisuldanda,Bagmati,popular,attraction,200,27.710551,85.454307,
+4655944692,Varadaraja Bhardwaja´s Home,Bagmati,popular,attraction,200,27.416631,85.040983,
+1343823370,cliff honey bee,Bagmati,popular,attraction,200,28.156722,85.390359,
+1343823402,cliff honey bee,Bagmati,popular,attraction,200,28.154702,85.380431,
+4305384192,lakhan thapa cave,Bagmati,popular,attraction,200,27.946972,84.677064,
+4208543589,lakhedanda,Bagmati,popular,attraction,200,27.959707,84.674683,
+10967378638,आरुबोटे पिक्निक स्थल,Bagmati,popular,attraction,200,27.956561,85.397,
+10967378640,उदिन ढुङ्गा पिक्निक स्थल,Bagmati,popular,attraction,200,27.979642,85.387238,
+11428709869,उपरदाङ गढी,Bagmati,popular,attraction,200,27.761977,84.582776,
+6243386285,कृष्ण को घर,Bagmati,popular,attraction,200,27.646638,85.535625,
+10967378641,गुम्बा चौर पिक्निक स्थल,Bagmati,popular,attraction,200,27.98518,85.390605,
+6018817255,चन्द्रागिरि केबलकार,Bagmati,popular,attraction,200,27.686207,85.214585,
+11391696969,जे पी भेटवाल पार्क,Bagmati,popular,attraction,200,27.596377,84.643584,
+10266628276,पाँचपोखरी थाङ्पाल,Bagmati,popular,attraction,200,28.041232,85.717084,
+2230569085,पाटन दरवार क्षेत्र,Bagmati,popular,attraction,200,27.673399,85.325056,
+4327655493,Aadheswor Temple,Bagmati,religious,temple,100,27.722734,85.271104,
+10068876012,Balkumari Temple,Bagmati,religious,temple,100,27.675947,85.385314,
+4907151222,Bijeswori Temple,Bagmati,religious,temple,100,27.713929,85.300768,
+6533228315,Bindabasini Temple,Bagmati,religious,temple,100,27.986359,84.749905,
+10057760340,Buddha Mandir,Bagmati,religious,temple,100,28.087536,85.389479,
+11139318601,Buddha Mandir,Bagmati,religious,temple,100,28.087404,85.389556,
+2087434219,Buddha stupa,Bagmati,religious,temple,100,27.718357,85.334835,
+10046798668,Buddhist Stupa,Bagmati,religious,temple,100,28.109511,85.343911,
+13235999803,"Chorten, Stupa",Bagmati,religious,temple,100,28.474595,85.008593,
+3074569539,Devi Mandir,Bagmati,religious,temple,100,27.711996,85.340802,
+3127570787,Dhaneshwar Temple,Bagmati,religious,temple,100,27.648168,85.358017,
+6521021153,Gokarna Mahadev Temple,Bagmati,religious,temple,100,27.739609,85.388083,
+10057773539,Guru Rinpoche Stupa,Bagmati,religious,temple,100,28.087696,85.389163,
+2662636091,Kalinchok Bhagwati Temple,Bagmati,religious,temple,100,27.757778,86.033737,
+11933661414,Laxmi Narsing Mandir,Bagmati,religious,temple,100,27.670582,85.42898,
+4168500390,Manamaiju Ajima Mai Temple,Bagmati,religious,temple,100,27.752077,85.31214,
+2905131448,Narayan Mandir,Bagmati,religious,temple,100,27.677382,86.075202,
+11845003094,Sagarmatha Bazaar,Bagmati,religious,temple,100,27.715101,85.310883,
+10057774917,Small Stupa,Bagmati,religious,temple,100,28.099698,85.371605,
+10046422696,Stone Stupa,Bagmati,religious,temple,100,28.127981,85.352236,
+694164541,Stupa with the remains of Chagdud Tulku Rinpoche,Bagmati,religious,temple,100,27.601314,85.246063,
+10046795966,Three Stone Stupas,Bagmati,religious,temple,100,28.110565,85.340242,
+5223229941,"historic Beding Gompa, Guru Rinpche cave",Bagmati,religious,monastery,200,27.905048,86.375909,
+4334933889,temple,Bagmati,religious,temple,100,27.727822,85.4617,
+2607616454,गणेशथान,Bagmati,religious,temple,100,27.70152,85.340108,
+3425977446,Baden-Powell Scout Peak,Bagmati,trekking,peak,0,28.167586,85.533383,5710
+4560651050,Bhemdang Karpo,Bagmati,trekking,peak,0,28.272601,85.687705,5691
+4560651051,Bhemdang Ri,Bagmati,trekking,peak,0,28.272138,85.663533,6150
+5592824867,Chalung Ri,Bagmati,trekking,peak,0,28.658616,85.431719,6767
+4526922905,Chekigo,Bagmati,trekking,peak,0,27.907969,86.414895,6257
+4526887681,Chomo Pamari,Bagmati,trekking,peak,0,28.057936,86.089394,6109
+3761207074,Colangma,Bagmati,trekking,peak,0,28.316462,86.285886,6952
+982202124,Dorje Lhakpa,Bagmati,trekking,peak,0,28.175405,85.778648,6966
+982195586,Dragmarpo Ri,Bagmati,trekking,peak,0,28.325673,85.661473,6200
+3496949863,Ganchenpo,Bagmati,trekking,peak,0,28.169391,85.678542,6300
+6185556322,Ganesh NW,Bagmati,trekking,peak,0,28.378902,85.055186,7118
+8688837493,Ghāṅnā,Bagmati,trekking,peak,0,28.253773,85.656447,5995
+4543165508,Gyaltsen,Bagmati,trekking,peak,0,28.183603,85.838433,6151
+3495849773,Jugal,Bagmati,trekking,peak,0,28.143192,85.871344,6500
+3425970429,Kimshung,Bagmati,trekking,peak,0,28.272257,85.552625,6401.0
+4543165516,Kyunga Ri 1,Bagmati,trekking,peak,0,28.296409,85.667905,6601
+6185556321,Langbo Kangri / Riogbanba,Bagmati,trekking,peak,0,28.49749,85.157297,6648
+4549896900,Langshisa Ri,Bagmati,trekking,peak,0,28.217778,85.714613,6420
+3761207076,Lapche Kang II,Bagmati,trekking,peak,0,28.304603,86.322012,7072
+3761207078,Lapche Kang III,Bagmati,trekking,peak,0,28.301688,86.383516,7250
+4543165511,Loenpo Gang,Bagmati,trekking,peak,0,28.196438,85.800191,6979
+632389897,Lower Kyāṅjiṅ Ri,Bagmati,trekking,peak,0,28.21767,85.570688,4300
+3496949868,Naya Kanga,Bagmati,trekking,peak,0,28.168624,85.548391,5846
+3620710221,Pabil,Bagmati,trekking,peak,0,28.345208,85.079578,7104
+3633381719,Paldor,Bagmati,trekking,peak,0,28.277378,85.187181,5903
+4578177659,Peri,Bagmati,trekking,peak,0,28.35338,85.721327,6150
+4552913762,Pongen Dopku,Bagmati,trekking,peak,0,28.16268,85.612964,5928
+12106410282,Ramdung Go,Bagmati,trekking,peak,0,27.81981,86.431781,5925
+3620710220,Salasungo,Bagmati,trekking,peak,0,28.336396,85.120491,7043
+632393142,Tserko Ri,Bagmati,trekking,peak,0,28.213241,85.600452,4985
+982209975,Yala Peak,Bagmati,trekking,peak,0,28.240965,85.62289,5732
+3213674432,Yalung Ri,Bagmati,trekking,peak,0,27.853837,86.411548,5647
+6333301847,चन्द्रागिरि हिल्स,Bagmati,trekking,peak,0,27.666021,85.205426,2551
+982180861,लाङटाङ लिरुङ,Bagmati,trekking,peak,0,28.256616,85.516803,7227
+2908665203,乔格茹 I 峰,Bagmati,trekking,peak,0,27.971552,86.430621,7181
+6855810185,108 Chahara,Gandaki,hiking,waterfall,100,28.478755,83.885817,
+8041908565,360 Mani Dada,Gandaki,hiking,viewpoint,0,28.251541,83.86248,
+4734125821,Armala Kot,Gandaki,hiking,viewpoint,0,28.276522,84.008913,
+8319154292,Baglung Kalika Temple Viewpoint,Gandaki,hiking,viewpoint,0,28.254329,83.615482,
+13296284301,Best valley view,Gandaki,hiking,viewpoint,0,28.678648,83.988771,
+13806251983,Bhateri Tree House,Gandaki,hiking,viewpoint,0,27.74882,84.478264,
+9600692052,Chichimle,Gandaki,hiking,viewpoint,0,28.36232,83.920889,
+4449338689,DHA101,Gandaki,hiking,viewpoint,0,28.191845,83.801192,
+9600692055,Deurali,Gandaki,hiking,viewpoint,0,28.373274,83.93025,
+4193320591,Deurali Pass Viewpoint,Gandaki,hiking,viewpoint,0,28.395485,83.712724,
+11708367040,Deurali view point,Gandaki,hiking,viewpoint,0,28.244713,83.523888,
+7388177586,Dhaulagiri icefall,Gandaki,hiking,viewpoint,0,28.691332,83.562127,
+7190180479,Dil,Gandaki,hiking,viewpoint,0,28.259174,83.856612,
+10845829015,Dipang Lake,Gandaki,hiking,lake,100,28.180083,84.071918,
+6053881270,Dulepani Chhahara,Gandaki,hiking,waterfall,100,28.303712,83.753981,
+4449288490,GAN431,Gandaki,hiking,viewpoint,0,28.1755,83.79073,
+3123521139,Gauthali Dadha,Gandaki,hiking,viewpoint,0,28.228762,84.382921,
+2476613537,Gharme Dada View Point,Gandaki,hiking,viewpoint,0,28.272368,83.972273,
+11415152073,Ghumaure घुमौरे झरना,Gandaki,hiking,waterfall,100,28.04445,84.098378,
+5234011521,Hampal Danda,Gandaki,hiking,viewpoint,0,28.346828,83.659087,
+9406835746,Hatti Maita View Point,Gandaki,hiking,viewpoint,0,28.157615,84.145163,
+9600692056,Helmet Dada,Gandaki,hiking,viewpoint,0,28.385919,83.934203,
+3486914220,Hidden Wild Waterfall,Gandaki,hiking,waterfall,100,28.254332,83.915475,
+7021067925,Hill-top viewpoint towards Manaslu,Gandaki,hiking,viewpoint,0,28.573583,84.694768,
+8041710521,HudiKot,Gandaki,hiking,viewpoint,0,28.125785,84.047663,
+10197048132,Jaljala / Virgin Falls,Gandaki,hiking,waterfall,100,28.253301,83.915213,
+5534085303,Kalika View Poiint Rest,Gandaki,hiking,viewpoint,0,28.20989,84.080709,
+9406835744,Kalika View Point,Gandaki,hiking,viewpoint,0,28.110681,84.152833,
+13870911402,Kern (4967 m),Gandaki,hiking,viewpoint,0,28.669795,84.577889,
+13870911202,"Kern (end of grass, start of stones, 5042 m)",Gandaki,hiking,viewpoint,0,28.672914,84.577672,
+12193636601,Khartung - Viewpoint,Gandaki,hiking,viewpoint,0,27.893625,83.499529,
+9600696690,Khumai Dada,Gandaki,hiking,viewpoint,0,28.390586,83.93463,
+3123694617,Kokaale Dada,Gandaki,hiking,viewpoint,0,28.211951,84.378509,
+4295711656,Lamchya dhadha,Gandaki,hiking,viewpoint,0,28.269989,83.897189,
+10154438466,Larke Pass Viewpoint,Gandaki,hiking,viewpoint,0,28.66415,84.579858,
+6911934885,Larkya Pass Sign (5160 meters),Gandaki,hiking,viewpoint,0,28.663961,84.520311,
+5504193918,Lovely Hill View Point,Gandaki,hiking,viewpoint,0,28.229269,83.977942,
+4497814890,Lower Viewpoint,Gandaki,hiking,viewpoint,0,28.448592,83.877093,3960
+3531968326,Machhapuchhre view point,Gandaki,hiking,viewpoint,0,28.188558,83.903548,
+10559194536,Majhkateri View Point,Gandaki,hiking,viewpoint,0,28.132101,83.7979,
+3208805743,Mardi Himal Base Camp (lower),Gandaki,hiking,viewpoint,0,28.459991,83.895027,
+8041702464,Mello Waterfall,Gandaki,hiking,waterfall,100,28.250255,83.916302,
+5500051503,Methlang View Point,Gandaki,hiking,viewpoint,0,28.231782,83.965749,
+12801784001,Mipra,Gandaki,hiking,viewpoint,0,28.379948,84.396676,
+12801784101,Mipra,Gandaki,hiking,viewpoint,0,28.378207,84.39626,
+1329317073,Mountain view,Gandaki,hiking,viewpoint,0,27.93997,84.410138,
+10154437097,Mt. Manaslu View,Gandaki,hiking,viewpoint,0,28.656029,84.598696,
+4475423116,NW of Machhapuchhre,Gandaki,hiking,viewpoint,0,28.368411,83.732326,
+7311997185,Narchyang waterfall,Gandaki,hiking,waterfall,100,28.511928,83.667936,
+2291206464,New Bridge Jharana,Gandaki,hiking,waterfall,100,28.39235,83.827977,
+13700242205,Nice bathing,Gandaki,hiking,waterfall,100,28.463492,83.861012,
+6176110788,Pandeli Deel Chautara,Gandaki,hiking,viewpoint,0,28.23834,83.940346,
+713296203,Patale Chhango,Gandaki,hiking,waterfall,100,28.190359,83.959439,
+4161865224,Phewa Lake View Point,Gandaki,hiking,lake,100,28.214786,83.955723,
+7021748151,Pokhara Valley View Point,Gandaki,hiking,viewpoint,0,28.233833,83.966548,
+12193622603,Rice fields Valley,Gandaki,hiking,viewpoint,0,27.88794,83.554993,
+7792068630,Royal Twins Waterfall and Canyoning,Gandaki,hiking,waterfall,100,28.202515,84.08714,
+10069789051,Rupa Lake,Gandaki,hiking,lake,100,28.150401,84.109893,
+1857868699,Rupse Waterfalls,Gandaki,hiking,waterfall,100,28.55497,83.635987,
+9406835748,Sahid Park,Gandaki,hiking,viewpoint,0,28.157927,84.21262,
+3485963579,Sarangkot View Point,Gandaki,hiking,viewpoint,0,28.246253,83.948809,
+520698757,Sarangkot Viewpoint,Gandaki,hiking,viewpoint,0,28.243695,83.957498,
+9406835749,Shahid Smarak Park,Gandaki,hiking,viewpoint,0,28.104293,84.214844,
+12801784201,Sildhunga,Gandaki,hiking,viewpoint,0,28.35931,84.390248,
+13870911403,Small waterfall,Gandaki,hiking,waterfall,100,28.597858,84.440031,
+5498511395,Soho Point,Gandaki,hiking,viewpoint,0,28.241919,83.947939,
+13286699701,Stone,Gandaki,hiking,viewpoint,0,28.642364,84.125942,
+5170249422,Suire,Gandaki,hiking,viewpoint,0,28.337977,83.84276,
+4475423121,Sunrise & Sunset View Point,Gandaki,hiking,viewpoint,0,28.400298,83.689283,
+3476013211,Sunrise/Annapurna Viewpoint,Gandaki,hiking,viewpoint,0,28.219246,83.811204,
+3476199617,Sunset Viewpoint,Gandaki,hiking,viewpoint,0,28.218529,83.810772,
+4066114502,Sunset view point,Gandaki,hiking,viewpoint,0,27.936914,84.401192,
+7792068629,Synakhudi Jharna,Gandaki,hiking,waterfall,100,28.20288,84.087454,
+9406835745,Thaple Danda View Point,Gandaki,hiking,viewpoint,0,28.157377,84.154239,
+12347743970,The Rodolfo Viewpoint,Gandaki,hiking,viewpoint,0,28.508602,83.904818,
+9600087929,Tubu Viewpoint & Paragliding Spot,Gandaki,hiking,viewpoint,0,28.344422,83.935787,
+9600692054,Tuse Deurali,Gandaki,hiking,viewpoint,0,28.372431,83.929537,
+8458607537,Tutunga View Point,Gandaki,hiking,viewpoint,0,28.179146,83.992136,
+4766427124,Upper Viewpoint,Gandaki,hiking,viewpoint,0,28.457161,83.885784,
+4814020622,Upper Viewpoint,Gandaki,hiking,viewpoint,0,28.457818,83.889039,4155
+9406835743,View Point Picnic Spot,Gandaki,hiking,viewpoint,0,28.186613,84.166528,
+13870910702,Viewpoint,Gandaki,hiking,viewpoint,0,28.521852,84.840068,
+3123793581,Village View Area,Gandaki,hiking,viewpoint,0,28.309048,84.264643,
+5151689824,Waterfall view,Gandaki,hiking,viewpoint,0,28.433732,84.39337,
+13279233401,Waterfall view,Gandaki,hiking,viewpoint,0,28.433651,84.393559,
+6517697493,kushma,Gandaki,hiking,viewpoint,0,28.219379,83.67976,
+10079761488,padam dada view point,Gandaki,hiking,viewpoint,0,28.060397,83.808777,
+4158677039,view to pokhara (Tiju ko Chautara),Gandaki,hiking,viewpoint,0,28.195987,83.950665,
+8064257985,खर्ववारी गाउँ,Gandaki,hiking,viewpoint,0,28.086163,84.126115,
+8833355898,चर्चरे View Point,Gandaki,hiking,viewpoint,0,27.939322,83.608018,
+12627867302,भलम view point,Gandaki,hiking,viewpoint,0,28.25595,83.999998,
+13266294901,Bergeries,Gandaki,historic,monument,150,28.602194,84.629833,
+11833249532,Burnt down house,Gandaki,historic,monument,150,28.43139,83.695839,
+11805396475,"DOAR, Lumle",Gandaki,historic,monument,150,28.297529,83.816895,
+1330352604,Dhuni Pati,Gandaki,historic,museum,300,28.004215,84.629058,
+5375601203,Dmitry Sobolev / Anatoli Boukreev Chorten,Gandaki,historic,monument,150,28.531154,83.877358,
+4378592203,Eco Museum,Gandaki,historic,museum,300,28.355114,84.102943,
+10083390106,Ethnic Tharu Museum,Gandaki,historic,museum,300,27.616468,84.241936,
+5463724221,Ganesh Man Singh,Gandaki,historic,monument,150,28.230301,83.984786,
+1738640568,Ghale Dzong,Gandaki,historic,monument,150,28.640763,84.122494,3755
+6908425471,Ghorepani Thati,Gandaki,historic,monument,150,28.399599,83.700251,
+6911459248,Himalayan Cultural Museum House,Gandaki,historic,museum,300,28.31011,83.774256,
+6901839130,Historical Educational Monument,Gandaki,historic,monument,150,28.283844,83.838994,
+6908136114,"Historical place,Ban Thanti point",Gandaki,historic,monument,150,28.370895,83.729065,
+10187727281,International Mountain Museum,Gandaki,historic,museum,300,28.189163,83.97979,
+10931642455,Karuwa,Gandaki,historic,monument,150,27.865806,83.548715,
+6908171175,Kaski Ulleri Pun Magar Museum,Gandaki,historic,museum,300,28.357263,83.736204,
+6956741632,Kuibo Dhi,Gandaki,historic,monument,150,28.356049,84.102189,
+1617990116,Liglig,Gandaki,historic,monument,150,28.06223,84.526696,
+4406803000,Manang Culture Museum,Gandaki,historic,museum,300,28.665375,84.024247,
+6907961961,Memorial of Founder of Poonhill,Gandaki,historic,monument,150,28.400028,83.689416,
+9917534100,Mithila Chitrakala and Province 2 Places,Gandaki,historic,monument,150,28.254723,83.977449,
+6957331585,Old Gurung Museum,Gandaki,historic,museum,300,28.377125,83.808857,
+977284017,Old Royal Palace,Gandaki,historic,monument,150,29.064043,83.872959,
+3359338503,Rani Mahal,Gandaki,historic,monument,150,27.926708,83.527799,
+973483428,Royal Palace,Gandaki,historic,monument,150,29.092717,83.9337,
+3510277929,Ruined village,Gandaki,historic,monument,150,28.89159,83.930978,
+6834076404,Santi Smarak,Gandaki,historic,monument,150,28.355147,84.103241,
+5470587951,Sesh Sahi Narayan Statue,Gandaki,historic,monument,150,28.246954,83.997143,
+1330353540,Tallo Kot,Gandaki,historic,monument,150,28.005033,84.625079,
+3123595025,Tamu Sangrahalaya,Gandaki,historic,museum,300,28.233111,84.377363,
+6904914518,Thati,Gandaki,historic,monument,150,28.309714,83.774527,
+1330353593,Upallo Kot,Gandaki,historic,monument,150,28.004195,84.634392,
+3349575302,तामेकोट (Tame Kot),Gandaki,historic,monument,150,27.983437,83.61948,
+9917635530,बि.पी. कोइराला सालिक,Gandaki,historic,monument,150,28.25439,83.976437,
+3349574901,"रानीफाल, तामेकोट",Gandaki,historic,monument,150,27.984546,83.61419,
+9917534091,सहिद अविनाश शालिक,Gandaki,historic,monument,150,28.254918,83.977063,
+4499970892,360 Paragliding,Gandaki,popular,attraction,200,28.20632,83.962829,
+8145157491,"9RD, Tirhut Canal",Gandaki,popular,attraction,200,27.410135,83.913467,
+13266295202,Altitude  4400 m,Gandaki,popular,attraction,200,28.656968,84.59536,
+13266295102,Altitude 4200 m,Gandaki,popular,attraction,200,28.657332,84.610246,
+13266294905,Altitude 4300 m,Gandaki,popular,attraction,200,28.656125,84.600471,
+10244720019,An imposing huge fold,Gandaki,popular,attraction,200,28.697768,84.628121,
+8189850488,Bajakot Homestay,Gandaki,popular,attraction,200,27.955503,83.737476,
+6411689877,Bandipur,Gandaki,popular,attraction,200,27.937861,84.406261,
+8189855416,Bankatta Homestay,Gandaki,popular,attraction,200,27.949121,83.795335,
+13251186401,Bhijam 2005 m,Gandaki,popular,attraction,200,28.509826,84.857388,
+7556453833,Bhulbhule waterfall,Gandaki,popular,attraction,200,28.291422,84.376666,
+13247640104,Bihi Phedi 2010 m,Gandaki,popular,attraction,200,28.49997,84.866811,
+4203978205,Bindhyabasini Party Palace,Gandaki,popular,attraction,200,28.237996,83.984546,
+568497246,Boat for rent,Gandaki,popular,attraction,200,28.203489,83.962608,
+13251186801,Bur 2073 m + passerelle,Gandaki,popular,attraction,200,28.520739,84.844276,
+5365767250,Byas gufa,Gandaki,popular,attraction,200,27.970433,84.267868,
+13266294904,Cani Gate,Gandaki,popular,attraction,200,28.64431,84.634017,
+13251186901,Cascade,Gandaki,popular,attraction,200,28.529475,84.837387,
+3072782064,Chamera (BAT) Cave,Gandaki,popular,attraction,200,27.988807,84.046733,
+977284052,Charang Village Gate,Gandaki,popular,attraction,200,29.087722,83.927462,
+13251186803,Chorten,Gandaki,popular,attraction,200,28.531263,84.820002,
+13251187202,Chorten,Gandaki,popular,attraction,200,28.533426,84.79714,
+13266294903,Chorten,Gandaki,popular,attraction,200,28.638423,84.635235,
+13251186707,Chorten Gate,Gandaki,popular,attraction,200,28.569454,84.723269,
+13251186805,Chorten Gate,Gandaki,popular,attraction,200,28.56964,84.718496,
+13253705001,Chorten Gate,Gandaki,popular,attraction,200,28.581793,84.648701,
+13266295301,Chorten Gate,Gandaki,popular,attraction,200,28.649642,84.633063,
+8191044980,Dangsiya Thamdanda View Point,Gandaki,popular,attraction,200,27.960797,83.737128,
+3072779005,Dhandhur Cave,Gandaki,popular,attraction,200,27.988781,84.04677,
+5676871423,Dhuk,Gandaki,popular,attraction,200,29.223341,83.981556,
+13251186501,Départ sentier,Gandaki,popular,attraction,200,28.513818,84.854828,
+12778069501,Entrance to snow leopard cave,Gandaki,popular,attraction,200,28.768665,83.726015,
+11812281744,Fish Observation Point,Gandaki,popular,attraction,200,28.207316,83.953548,
+13248953401,Gampul 1550 m,Gandaki,popular,attraction,200,28.436817,84.900474,
+13251186602,Gap 2100 m,Gandaki,popular,attraction,200,28.529922,84.831549,
+13251187001,Gap 2105 m,Gandaki,popular,attraction,200,28.52847,84.835438,
+13251186603,Gap 2125 m,Gandaki,popular,attraction,200,28.53049,84.826427,
+13251187301,Gap 2125 m,Gandaki,popular,attraction,200,28.53122,84.820232,
+13251187401,Gapshya 2150 m,Gandaki,popular,attraction,200,28.532474,84.814065,
+8414665471,Garphu Cave,Gandaki,popular,attraction,200,29.236047,83.98215,
+13251187205,Gate,Gandaki,popular,attraction,200,28.561623,84.742158,
+8191046836,Ghurunkha Tourist Homestay Building,Gandaki,popular,attraction,200,27.99001,83.68171,
+4311715390,Golo Ghar,Gandaki,popular,attraction,200,27.868478,83.54563,
+13235878522,Gupteswor Gupha,Gandaki,popular,attraction,200,28.227282,83.674538,
+12777566806,Hampal Modi,Gandaki,popular,attraction,200,28.338284,83.669901,
+5130680423,Hiking Entrance of World Peace Biodiversity Garden,Gandaki,popular,attraction,200,28.194222,83.967423,
+11812281745,Hotels Signs Wall,Gandaki,popular,attraction,200,28.206046,83.96045,
+12756504657,Jaljala,Gandaki,popular,attraction,200,28.338948,83.666209,
+8191064419,Kokhe Homestay,Gandaki,popular,attraction,200,28.010874,83.666599,
+13694535402,Landruk,Gandaki,popular,attraction,200,28.372206,83.828756,
+6837562013,Leopard Face stone,Gandaki,popular,attraction,200,28.252015,83.821078,
+13251186604,Lunga Chhyuda 2375 m,Gandaki,popular,attraction,200,28.533445,84.797348,
+13251186502,Mani - Mur à prière,Gandaki,popular,attraction,200,28.533666,84.806875,
+13251186902,Mani - Mur à prière,Gandaki,popular,attraction,200,28.533845,84.806005,
+13251187501,Mani Wall,Gandaki,popular,attraction,200,28.566149,84.730215,
+13266294902,Mani Wall,Gandaki,popular,attraction,200,28.606493,84.639103,
+13266295101,Mani Wall,Gandaki,popular,attraction,200,28.638142,84.635428,
+13266295201,Mani Wall,Gandaki,popular,attraction,200,28.645995,84.632681,
+8191072513,Mansangkot Paragliding Area,Gandaki,popular,attraction,200,28.003096,83.794326,
+9714466417,Milarepa Cave,Gandaki,popular,attraction,200,28.610679,84.46787,
+6072739953,Musirani Chuli,Gandaki,popular,attraction,200,28.280819,83.689095,
+13251186705,Namsang Khola 2850 m,Gandaki,popular,attraction,200,28.55945,84.731641,
+4827150821,National Park HQ (gharial breeding project),Gandaki,popular,attraction,200,27.553373,84.339029,
+4154880838,Nature Cure Wellness,Gandaki,popular,attraction,200,28.222991,83.992151,
+5676871425,Nenyul,Gandaki,popular,attraction,200,29.198417,83.968314,
+5245962322,Newari Khaja,Gandaki,popular,attraction,200,28.19862,83.969748,
+12688609093,Nupsang Valley,Gandaki,popular,attraction,200,28.661737,83.618349,
+11946402369,Om,Gandaki,popular,attraction,200,27.868917,83.559791,
+13251186601,Pandrung 2080 m,Gandaki,popular,attraction,200,28.515031,84.852574,
+6062534358,Parbati Cave,Gandaki,popular,attraction,200,28.283777,83.746441,
+4213348389,Patale Chhango (Devi's Falls),Gandaki,popular,attraction,200,28.189896,83.95888,
+5376122152,Paungda Danda Mountain (Great Wall of Pisang),Gandaki,popular,attraction,200,28.592699,84.193758,
+13251187002,Porte,Gandaki,popular,attraction,200,28.52932,84.831074,
+973481922,Royal Summer Palace,Gandaki,popular,attraction,200,29.207141,83.940337,
+4597691201,Sammelee,Gandaki,popular,attraction,200,28.159576,84.065866,
+8936266351,Sankhadhar Sakhwa,Gandaki,popular,attraction,200,27.865062,83.547997,
+7000696835,Shital Gufa,Gandaki,popular,attraction,200,28.2956,83.778707,
+4219901192,Shivaghat,Gandaki,popular,attraction,200,27.677492,84.377267,
+13251733802,Shorten Gate,Gandaki,popular,attraction,200,28.573367,84.703136,
+8191080681,Shree Maidain Homestay,Gandaki,popular,attraction,200,27.995492,83.681231,
+13251670203,Shyala 3500 m,Gandaki,popular,attraction,200,28.574076,84.671899,
+13251186706,Shyo 2960 m,Gandaki,popular,attraction,200,28.567181,84.728251,
+1329319684,Siddha Cave,Gandaki,popular,attraction,200,27.94844,84.418502,
+8191016578,Sidha Gufa Hulkang,Gandaki,popular,attraction,200,28.026149,83.699347,
+13251186703,Suksum,Gandaki,popular,attraction,200,28.534654,84.787516,
+13251187203,Suksum 2265 m + sentier,Gandaki,popular,attraction,200,28.534454,84.78716,
+12976854700,Swamp with rhinos,Gandaki,popular,attraction,200,27.567643,84.218443,
+12976865001,Swamp with rhinos,Gandaki,popular,attraction,200,27.566705,84.220287,
+12976865002,Swamp with rhinos,Gandaki,popular,attraction,200,27.568321,84.225721,
+6055191310,Tangle Tourism Spot,Gandaki,popular,attraction,200,28.313378,83.736321,
+12777485893,Thalthale,Gandaki,popular,attraction,200,28.341694,83.678668,
+8191082930,Thamko Chaur Tourist Area,Gandaki,popular,attraction,200,27.984965,83.780694,
+4593932689,Thulakhet,Gandaki,popular,attraction,200,28.189961,83.786494,
+6063025200,Vamarkot,Gandaki,popular,attraction,200,28.306645,83.732528,2224
+6053881268,ViewPoint,Gandaki,popular,attraction,200,28.304036,83.756154,
+6052291828,Waterfall,Gandaki,popular,attraction,200,28.309939,83.714222,
+6052319933,Waterfall,Gandaki,popular,attraction,200,28.31245,83.704461,
+13247641402,Wongrung Khola 2100 m,Gandaki,popular,attraction,200,28.496892,84.869799,
+9891008817,कोखे डाँडा,Gandaki,popular,attraction,200,28.372573,83.68637,
+6053034292,जलजला,Gandaki,popular,attraction,200,28.339023,83.666647,
+1431996477,मुक्तिनाथ,Gandaki,popular,attraction,200,28.816916,83.871455,
+8189842938,Akala Devi Mandir Sirsekot,Gandaki,religious,temple,100,27.986614,83.678882,
+4269625792,Bhairab Temple,Gandaki,religious,temple,100,28.232841,83.985307,
+5309982422,Bhumre Shiva Mandir,Gandaki,religious,temple,100,27.979612,83.750715,
+2601023776,Panchase Temple,Gandaki,religious,temple,100,28.228882,83.797296,
+13253704401,Panneau Shyala - Pungen Gumba,Gandaki,religious,temple,100,28.565887,84.655872,
+13253703901,Pungen Gumba 4040 m,Gandaki,religious,temple,100,28.551515,84.627858,
+11812281742,Taal Barahi Temple Island,Gandaki,religious,temple,100,28.207452,83.953443,
+3347197860,deurali devi mandir,Gandaki,religious,temple,100,27.726874,84.411194,
+7159943069,nag statue and temple,Gandaki,religious,temple,100,28.299955,83.769757,
+3392281634,sprinkle kids garden,Gandaki,religious,monastery,200,27.677267,84.423906,
+727090665,Annapurna South,Gandaki,trekking,peak,0,28.518396,83.806343,7219
+3619467959,Chamar,Gandaki,trekking,peak,0,28.555085,84.943723,7100
+4765460721,Chhiv Himal,Gandaki,trekking,peak,0,28.873629,84.159884,6650
+530579647,Dhaulagiri,Gandaki,trekking,peak,0,28.697609,83.489488,8167
+3667795258,Dhaulagiri II,Gandaki,trekking,peak,0,28.763159,83.387379,7751
+3667795253,Dhaulagiri IV,Gandaki,trekking,peak,0,28.735749,83.314379,7661
+3544783617,Dhaulagiri V,Gandaki,trekking,peak,0,28.734057,83.360579,7616
+2935182022,Gangapurna,Gandaki,trekking,peak,0,28.605655,83.963514,7455
+12537507163,Ghustang,Gandaki,trekking,peak,0,28.681015,83.245366,6529
+3667795248,Gurja Himal,Gandaki,trekking,peak,0,28.674102,83.275664,7193
+2967385868,Gyaji Kang,Gandaki,trekking,peak,0,28.734933,84.366936,7038
+1781744530,Himachuli,Gandaki,trekking,peak,0,28.437727,84.636696,7893
+3552319136,Khatung Kang,Gandaki,trekking,peak,0,28.777777,83.918292,6484
+3578217861,Khumjungar,Gandaki,trekking,peak,0,28.888992,84.126882,6759
+2935179265,Lamjung Himal,Gandaki,trekking,peak,0,28.489508,84.188609,6983
+727108156,Machapuchare,Gandaki,trekking,peak,0,28.49798,83.945876,6993
+5612192705,Mardi Himal,Gandaki,trekking,peak,0,28.473769,83.927535,5553
+1078765330,Ngadi Chuli,Gandaki,trekking,peak,0,28.503927,84.567249,7871
+3586337220,Nimjung,Gandaki,trekking,peak,0,28.736327,84.417796,7140
+3588472637,Pisang Peak,Gandaki,trekking,peak,0,28.648653,84.18809,6091
+3537642993,Putha Hiunchuli,Gandaki,trekking,peak,0,28.747922,83.14544,7246
+11392096568,Ratna Chuli,Gandaki,trekking,peak,0,28.86498,84.375236,7035
+5612192693,Sita Chuchura,Gandaki,trekking,peak,0,28.782078,83.483832,6611
+2883814670,Tarke Kang,Gandaki,trekking,peak,0,28.607355,83.886437,7193
+2865346152,Thapa Peak,Gandaki,trekking,peak,0,28.797951,83.606446,6012
+2935202256,Tharpu Chull,Gandaki,trekking,peak,0,28.561994,83.88942,5695
+11380918399,Thulagi Chuli,Gandaki,trekking,peak,0,28.528885,84.523315,7069
+727440357,Tilicho Peak,Gandaki,trekking,peak,0,28.682918,83.811479,7134
+727451270,Tukuche Peak,Gandaki,trekking,peak,0,28.744953,83.557406,6920
+727127535,Yakawa Kang,Gandaki,trekking,peak,0,28.808901,83.941934,6482
+289923681,अन्नपूर्ण,Gandaki,trekking,peak,0,28.595806,83.81992,8091
+3588473785,अन्नपूर्णा II,Gandaki,trekking,peak,0,28.534971,84.121822,7937
+2935181986,अन्नपूर्णा III,Gandaki,trekking,peak,0,28.585351,83.989109,7555
+2966471204,अन्नपूर्णा IV,Gandaki,trekking,peak,0,28.536893,84.083562,7525
+565159949,मनास्लु,Gandaki,trekking,peak,0,28.549983,84.559728,8163
+8313770441,Bayal Jharana,Karnali,hiking,waterfall,100,29.2962,81.706598,
+8315757679,Chadaya Khola Jharana,Karnali,hiking,waterfall,100,29.169716,81.830697,
+6558271491,Chyachhara Jharna,Karnali,hiking,waterfall,100,30.036631,81.743345,
+8373979675,Dho Tarap view point,Karnali,hiking,viewpoint,0,29.132831,83.194855,
+5898622600,Ghurchi Lagna,Karnali,hiking,viewpoint,0,29.468181,82.130831,
+13762572702,"Kailash Mansarovar Viewpoint, Lapche La",Karnali,hiking,viewpoint,0,30.415847,81.6137,
+7886221985,"Kailash Mansarowar darshan viewpoint, Lapcha",Karnali,hiking,viewpoint,0,30.409129,81.611035,
+13762572701,Lapche La,Karnali,hiking,viewpoint,0,30.411828,81.607655,
+6213882877,Munelek,Karnali,hiking,viewpoint,0,29.768145,81.832706,3700
+7098406386,Pandhale Top (पंधाले लाग्ना),Karnali,hiking,viewpoint,0,29.746007,82.008911,
+5588158795,Ranakot Viewpoint,Karnali,hiking,viewpoint,0,29.566558,81.822304,
+4818313121,Rara Lake,Karnali,hiking,lake,100,29.528203,82.0926,
+8332735440,Bir Smarika,Karnali,historic,monument,150,28.607553,81.637419,
+4067939063,Chock,Karnali,historic,monument,150,28.954094,82.895027,
+2201333504,Ghantaghar,Karnali,historic,monument,150,28.597655,81.620155,
+2201357868,Regional Musium,Karnali,historic,museum,300,28.596175,81.624308,
+8322077921,Sahid Memorial Statue,Karnali,historic,monument,150,29.291001,81.592735,
+6515959987,Khaptad Ostrich Form,Karnali,popular,attraction,200,28.259372,81.687827,
+6006036086,Khatyad Khola,Karnali,popular,attraction,200,29.526214,81.935401,
+5588158794,Murkot,Karnali,popular,attraction,200,29.567398,81.825037,
+9376244130,काँक्रे बिहार,Karnali,popular,attraction,200,28.564452,81.621329,
+8309132732,Kot Durbar,Karnali,religious,monastery,200,29.152337,81.599195,
+3702122706,Hiūnchuli Pātan,Karnali,trekking,peak,0,28.828084,82.616897,5916
+3923927028,Kande Hiuchuli,Karnali,trekking,peak,0,29.411977,82.560166,6627
+3235160809,Kānjirobā,Karnali,trekking,peak,0,29.375967,82.637881,6883
+3079038633,Syānāṭh,Karnali,trekking,peak,0,29.620133,82.558382,5912
+4280574090,Ayabari rent,Koshi,hiking,viewpoint,0,26.649437,88.137502,
+11936539169,"Changey Waterfalls, Sikkim",Koshi,hiking,waterfall,100,27.278617,88.167461,
+9634915990,Chine Danda View Point,Koshi,hiking,viewpoint,0,26.841812,87.274586,775
+4303293589,Chisapani,Koshi,hiking,viewpoint,0,26.811114,88.107367,
+1679173453,Cho La,Koshi,hiking,viewpoint,0,27.961725,86.751637,5368
+5546921623,Darap,Koshi,hiking,viewpoint,0,27.304628,88.187109,
+428552946,Everest View,Koshi,hiking,viewpoint,0,27.819612,86.72366,
+703894849,Everest View,Koshi,hiking,viewpoint,0,27.793507,86.715891,
+4502408491,Everest View,Koshi,hiking,viewpoint,0,27.811617,86.718253,3885
+5224346240,Everest View,Koshi,hiking,viewpoint,0,27.817742,86.72355,
+5224347823,Everest View,Koshi,hiking,viewpoint,0,27.816914,86.723655,
+703894933,Everest View Point,Koshi,hiking,viewpoint,0,27.802562,86.715309,
+5325237525,Everest viewpoint,Koshi,hiking,viewpoint,0,27.995935,86.828379,
+5325237983,Everest viewpoint,Koshi,hiking,viewpoint,0,27.96162,86.683122,
+12785705133,First View of EBC @5000,Koshi,hiking,viewpoint,0,27.950741,86.816117,5000
+10839420911,First view of Hongri monastery from the long climb up,Koshi,hiking,viewpoint,0,27.35351,88.253505,
+4838267222,Ganesh Waterfall,Koshi,hiking,waterfall,100,27.371667,88.23683,
+12752937501,Giddapahar Jharna,Koshi,hiking,waterfall,100,26.860785,88.290905,
+11730400730,Gokyo Ri,Koshi,hiking,viewpoint,0,27.961118,86.682976,
+2084522598,Gombu Rock,Koshi,hiking,viewpoint,0,27.057955,88.256243,
+12823604602,Helipad,Koshi,hiking,viewpoint,0,27.563589,86.677206,
+11873784369,Hilley,Koshi,hiking,viewpoint,0,27.185955,88.12179,
+3664207356,Him Pipe,Koshi,hiking,waterfall,100,26.748646,87.023726,
+9502459570,Hyatung Waterfall,Koshi,hiking,waterfall,100,27.222445,87.593916,
+12290974591,Jannu Phaktanglung View Point,Koshi,hiking,viewpoint,0,27.722796,87.969151,
+10836658709,Kanchendzonga view from the skywalk,Koshi,hiking,viewpoint,0,27.296911,88.219577,
+10836661007,Kanchenjunga view,Koshi,hiking,viewpoint,0,27.296655,88.218136,
+10836720805,Kanchenjunga view,Koshi,hiking,viewpoint,0,27.300175,88.233352,
+10836720806,Kanchenjunga view from the gas station,Koshi,hiking,viewpoint,0,27.301919,88.237459,
+2110919713,Khecheopalri Lake Viewpoint,Koshi,hiking,lake,100,27.354204,88.188327,
+1679173380,Kongma La Pass,Koshi,hiking,viewpoint,0,27.929705,86.836219,5535
+2110919714,Kunchenjunga Waterfall,Koshi,hiking,waterfall,100,27.359684,88.197977,
+4624970589,Lake temple,Koshi,hiking,lake,100,27.351845,88.189639,
+12813609201,Lake view,Koshi,hiking,lake,100,27.951234,86.695357,
+2444311727,Lamla La,Koshi,hiking,viewpoint,0,28.330652,86.713413,
+5330416622,Lepcha Tol,Koshi,hiking,viewpoint,0,26.884974,87.998537,
+9435761129,MAKALU VIEWPOINT,Koshi,hiking,viewpoint,0,27.13042,87.403463,
+4891953022,Maipokhari,Koshi,hiking,viewpoint,0,27.031846,87.908867,
+6979214491,Maney Bhanjyang,Koshi,hiking,viewpoint,0,26.987288,88.120334,
+11937239069,Pelling Ropeway,Koshi,hiking,viewpoint,0,27.301057,88.230807,
+6314252585,Phamrong falls,Koshi,hiking,waterfall,100,27.357077,88.234956,
+4560228692,Raatnange Danda,Koshi,hiking,viewpoint,0,27.512937,86.617891,
+2110915153,Rimbi Waterfall,Koshi,hiking,waterfall,100,27.313247,88.19055,
+5139521233,River view,Koshi,hiking,viewpoint,0,27.382815,88.219342,
+13470116348,Simpani Conservation Field,Koshi,hiking,lake,100,26.89489,88.051315,
+6594068186,Stunning views!,Koshi,hiking,viewpoint,0,27.053631,88.257688,
+6153595190,Tashi Tenka,Koshi,hiking,viewpoint,0,27.361084,88.219582,
+2084522609,Tenzing Rock,Koshi,hiking,viewpoint,0,27.057936,88.256564,
+8597573417,Tikjuk Viewpoint (SlynteR),Koshi,hiking,viewpoint,0,27.298958,88.253348,
+5139521231,Valley view stp,Koshi,hiking,viewpoint,0,27.354959,88.244503,
+1679203258,View from Lamjura La,Koshi,hiking,viewpoint,0,27.578639,86.498072,
+10839420906,View of Kanchenjunga from the ridge (best view in Yuksom),Koshi,hiking,viewpoint,0,27.36262,88.220405,
+10839420914,View of tashiding from the steps down,Koshi,hiking,viewpoint,0,27.341914,88.288341,
+5139506233,View over the valley STP,Koshi,hiking,viewpoint,0,27.365736,88.221555,
+1927153199,View to Arun River,Koshi,hiking,viewpoint,0,27.401116,87.120783,
+703971944,View to Cho Oyu,Koshi,hiking,viewpoint,0,27.94847,86.615139,
+766944560,View to Everest,Koshi,hiking,viewpoint,0,27.569184,86.583238,
+766944568,View to Everest,Koshi,hiking,viewpoint,0,27.572322,86.584273,
+1910209004,View to Karelung,Koshi,hiking,viewpoint,0,27.5836,86.75121,
+5139521125,Viewpoint STP,Koshi,hiking,viewpoint,0,27.370035,88.2327,
+1910209009,Viewpoint near Surki La,Koshi,hiking,viewpoint,0,27.56582,86.810093,
+343394666,"War Memorial, Batasia Loop",Koshi,hiking,viewpoint,0,27.016701,88.247119,
+4847093722,Yuksom,Koshi,hiking,viewpoint,0,27.371628,88.23423,
+12752929602,view point of Kurseong,Koshi,hiking,viewpoint,0,26.862131,88.284666,
+7990715185,केचना,Koshi,hiking,viewpoint,0,26.361064,88.007341,
+703972266,रेंजो ला,Koshi,hiking,viewpoint,0,27.94737,86.658497,5398
+4613103241,शिव जट्टा,Koshi,hiking,waterfall,100,26.843888,87.324431,
+13286985502,1963 American Everest Expedition,Koshi,historic,monument,150,27.89301,86.826565,
+12780805036,AAAA国家级旅游景区,Koshi,historic,monument,150,28.590261,87.078527,
+4787582025,Alexander Csoma de Kőrös memorial carve,Koshi,historic,monument,150,27.048535,88.265873,
+4903119121,Ava art gallery museum,Koshi,historic,museum,300,27.029159,88.257425,
+3547309040,Burdwan Palace,Koshi,historic,monument,150,27.034626,88.254183,
+4049655871,Deshbandu Museum,Koshi,historic,museum,300,27.046631,88.268739,
+13797822703,Dj. Sokol,Koshi,historic,monument,150,27.814929,86.700708,
+10829030207,Druk museum,Koshi,historic,museum,300,27.023712,88.25433,
+11730385960,Everest Base Camp Monument,Koshi,historic,monument,150,27.997379,86.847252,
+4736645451,Ghum railway museum,Koshi,historic,museum,300,27.00832,88.253885,
+4791898423,Himalayan Tibet Museum,Koshi,historic,museum,300,27.039443,88.265887,
+13575944171,Kulchowk,Koshi,historic,monument,150,26.46166,88.070317,
+736963688,Memorials for Alpinists & Mountaineers,Koshi,historic,monument,150,27.931106,86.804611,4822
+10836658708,Museum on third floor,Koshi,historic,museum,300,27.305332,88.251656,
+12745334601,Museum(Senchal Wildlife Sanctuary),Koshi,historic,museum,300,26.995587,88.281128,
+11175761143,Natural history museum,Koshi,historic,museum,300,27.057635,88.254674,
+12813608501,Old village,Koshi,historic,monument,150,27.930915,86.783231,
+4738409526,Phago Niwas,Koshi,historic,museum,300,26.895913,88.062437,
+12778109498,Polish Climbers Memorial,Koshi,historic,monument,150,27.802226,86.715686,
+7033837230,Sagarmatha Next,Koshi,historic,museum,300,27.810596,86.715068,3775
+2110910174,Sculpture Shed,Koshi,historic,museum,300,27.30194,88.256004,
+4049697954,Statue of Bhanu Bhakta Acharya,Koshi,historic,monument,150,27.044974,88.267554,
+7850332216,Surya Istamba,Koshi,historic,monument,150,26.632361,87.976064,
+4624936190,Tashi choling monestry,Koshi,historic,monument,150,27.349505,88.191712,
+4787587221,Tomb of Alexander Csoma de Koros,Koshi,historic,monument,150,27.052279,88.259025,
+4056075533,Tomb of General Lloyd,Koshi,historic,monument,150,27.052676,88.258676,
+5139519947,Waiting shed memorial,Koshi,historic,monument,150,27.381995,88.219587,
+2867872122,statue of Bhanubhakta Acharya,Koshi,historic,monument,150,27.211093,86.793322,
+11732879169,छाता चोक,Koshi,historic,monument,150,26.661389,87.997487,
+11671005470,पुष्पलाल चोक,Koshi,historic,monument,150,26.667581,87.99996,
+575545988,मुक्ति चोक,Koshi,historic,monument,150,26.643063,87.991907,
+736940464,शेर्पा संस्कृति संग्रहालय,Koshi,historic,museum,300,27.805039,86.714347,3517
+4457982789,Antu Hill,Koshi,popular,attraction,200,26.87282,88.140566,
+3316604575,Betana Wetlands,Koshi,popular,attraction,200,26.658945,87.430644,
+10836659605,Bird park,Koshi,popular,attraction,200,27.301895,88.251427,
+7076984886,Brige,Koshi,popular,attraction,200,27.36077,88.195527,
+4359505089,Chamaita,Koshi,popular,attraction,200,27.008379,87.833843,
+5084616917,Chari ko ghar 1,Koshi,popular,attraction,200,26.676926,87.703847,
+4885657621,Chari ko ghar 2,Koshi,popular,attraction,200,26.677084,87.703944,
+342098529,Coronation Stone,Koshi,popular,attraction,200,27.370082,88.216825,
+9729019717,Darap Cultural Village,Koshi,popular,attraction,200,27.3041,88.183493,
+4550535489,"Dhobi dhara, Ilam",Koshi,popular,attraction,200,26.917514,87.929375,
+4523344491,Dobate,Koshi,popular,attraction,200,27.072664,88.003814,
+5075164822,Doser Chock,Koshi,popular,attraction,200,26.8945,88.02957,
+3316604584,Elephant Stable,Koshi,popular,attraction,200,26.621225,87.02989,
+4930809021,Fun N Food Village Resort,Koshi,popular,attraction,200,26.4572,87.293575,
+4531556189,Gagre Vanjyang,Koshi,popular,attraction,200,26.934226,87.852536,
+10831428808,Gandhi statue,Koshi,popular,attraction,200,27.131616,88.281716,
+4225425492,Gautam's House,Koshi,popular,attraction,200,26.563583,88.079186,
+5289767321,"Gopal Dhara Tea plantation , view point",Koshi,popular,attraction,200,26.911839,88.15002,
+4550517291,Ilam Chok Bazar,Koshi,popular,attraction,200,26.90972,87.928361,
+5546847524,Kanepokhari Pokhari,Koshi,popular,attraction,200,26.651068,87.497233,
+5253899121,Mai Khola pul,Koshi,popular,attraction,200,26.883536,87.928245,
+4443949189,Mechi pul border,Koshi,popular,attraction,200,26.643312,88.166154,
+10839422113,Nessa hamlet,Koshi,popular,attraction,200,27.353333,88.258683,
+9728837117,Orange Grove,Koshi,popular,attraction,200,27.316648,88.196311,
+10839421611,Pokhari Dara village,Koshi,popular,attraction,200,27.357975,88.274306,
+10839420918,Prayer flags,Koshi,popular,attraction,200,27.338646,88.282343,
+4211778789,Ranibaan Simsar Chetra Sharnamati,Koshi,popular,attraction,200,26.527608,87.876477,
+4780359160,Samalbung,Koshi,popular,attraction,200,26.888999,88.129898,
+4641553190,Sewan Tiwari's House,Koshi,popular,attraction,200,26.456255,87.291921,
+10831439705,Sikkim entry,Koshi,popular,attraction,200,27.128043,88.272655,
+4359506289,Soyak,Koshi,popular,attraction,200,26.868164,87.87948,
+4172563301,Street Food Stalls,Koshi,popular,attraction,200,27.044005,88.267884,
+5096958322,Suraj Limbu home lalbhitti,Koshi,popular,attraction,200,26.67641,87.410001,
+7077020385,Tathang,Koshi,popular,attraction,200,27.332713,88.214948,
+4175400389,The Mall Market,Koshi,popular,attraction,200,27.045154,88.267375,
+4160295391,Tilak katuwal's Home,Koshi,popular,attraction,200,26.441018,87.212553,
+4914661421,Tiwari's residence,Koshi,popular,attraction,200,26.456389,87.291917,
+10829575006,Tomb of Tenzing Norgay,Koshi,popular,attraction,200,27.058571,88.253909,
+9731678117,Trail entrance to viewpoint,Koshi,popular,attraction,200,27.365261,88.221445,
+7152881585,Tree growing through house,Koshi,popular,attraction,200,26.867878,88.296274,
+10839421610,Tsong village,Koshi,popular,attraction,200,27.362396,88.239855,
+4509913889,Upper Mai Hydroelectric Project,Koshi,popular,attraction,200,27.024707,87.958166,
+4836807823,Utise,Koshi,popular,attraction,200,27.069022,87.965144,
+10839421609,Village,Koshi,popular,attraction,200,27.369926,88.232813,
+10831428807,We love Sikkim sign,Koshi,popular,attraction,200,27.132018,88.28179,
+10839420907,Welcome to Yuksum gate,Koshi,popular,attraction,200,27.371029,88.2213,
+7076984887,viliage,Koshi,popular,attraction,200,27.362663,88.199403,
+7076984888,viliage,Koshi,popular,attraction,200,27.366361,88.202541,
+4550534789,zero point Ilam,Koshi,popular,attraction,200,26.907336,87.932974,
+4885636522,देवकोटा चोक,Koshi,popular,attraction,200,26.663446,87.700734,
+11510705469,पचरुखी चोक,Koshi,popular,attraction,200,26.668695,87.252901,
+10083796317,प्रतिभा चौक,Koshi,popular,attraction,200,26.442653,87.282834,
+8667702117,बालासन घिर्लिंग,Koshi,popular,attraction,200,26.912379,88.24962,
+10798673705,भानुभक्त चोक,Koshi,popular,attraction,200,26.671527,87.701435,
+4885611032,रातो पुल,Koshi,popular,attraction,200,26.668778,87.699688,
+10798673805,सैनिक चोक,Koshi,popular,attraction,200,26.673565,87.702023,
+10839420910,Farming Village just below Hongri monastery,Koshi,religious,monastery,200,27.353558,88.251893,
+11175761040,"Painted rock, steps to the left go up to the monastery",Koshi,religious,monastery,200,27.310531,88.293639,
+5566869123,Pathivara temple,Koshi,religious,temple,100,27.429233,87.767937,
+477904058,Ama Dablam,Koshi,trekking,peak,0,27.8621,86.860429,6814
+4537877590,Arrlungtsuk,Koshi,trekking,peak,0,27.463323,88.227731,4619
+8228784800,Baruntse,Koshi,trekking,peak,0,27.872062,86.979649,7152
+2881620364,Chamlang,Koshi,trekking,peak,0,27.776994,86.981056,7319
+4079817699,Cho Aui I,Koshi,trekking,peak,0,28.073097,86.61266,7350
+2677892527,Cho Polu,Koshi,trekking,peak,0,27.919454,86.981987,6735
+2526429858,Cholatse,Koshi,trekking,peak,0,27.919616,86.765176,6423
+6104367055,Cholo,Koshi,trekking,peak,0,27.984324,86.719535,6043
+1679250333,Chukhung Ri,Koshi,trekking,peak,0,27.925334,86.879202,5546
+3213673457,Chukyima Go,Koshi,trekking,peak,0,27.832071,86.448888,6259
+2683830785,Chumbu,Koshi,trekking,peak,0,28.01364,86.787829,6859
+5521134389,Dablhagang (Dzongri Top),Koshi,trekking,peak,0,27.480429,88.163584,4171
+3523141653,Drangnag Ri,Koshi,trekking,peak,0,27.939394,86.523289,6801
+7061583723,Drohmo,Koshi,trekking,peak,0,27.824377,88.100815,6881
+6047551173,Gimmigela I,Koshi,trekking,peak,0,27.741006,88.158299,7350
+425189343,Gokyo Ri,Koshi,trekking,peak,0,27.961544,86.683127,5357
+477904053,Imja Tse,Koshi,trekking,peak,0,27.920014,86.934646,6165
+3530571927,Janak Chuli,Koshi,trekking,peak,0,27.873267,88.091077,7041
+6415692718,Jobo Rinjang,Koshi,trekking,peak,0,28.043065,86.563291,6778
+4537877595,Jopuno,Koshi,trekking,peak,0,27.527452,88.222905,5936
+4537877594,Kabru North,Koshi,trekking,peak,0,27.635002,88.118329,7412
+564117511,Kala Patthar,Koshi,trekking,peak,0,27.9958,86.828441,5645
+4462458037,Kangchenjunga,Koshi,trekking,peak,0,27.703011,88.147477,8586
+12151324351,Kangchenjunga Central,Koshi,trekking,peak,0,27.696337,88.150834,8473
+12151324350,Kangchenjunga South,Koshi,trekking,peak,0,27.692277,88.154014,8476
+9606342175,Kangtega,Koshi,trekking,peak,0,27.793016,86.817483,6783
+3213654115,Karyolung,Koshi,trekking,peak,0,27.733471,86.611844,6511
+3213654173,Khatang,Koshi,trekking,peak,0,27.757649,86.595323,6853
+10264795124,Khumbila,Koshi,trekking,peak,0,27.84879,86.706709,5761
+4537877593,Kirat Chuli,Koshi,trekking,peak,0,27.791463,88.197137,7362
+6184730891,Kokthang,Koshi,trekking,peak,0,27.563246,88.079484,6148
+274019561,Kongde Ri,Koshi,trekking,peak,0,27.793008,86.642775,6187
+9727634315,Kongma Tse,Koshi,trekking,peak,0,27.943934,86.838309,5849
+3530571951,Kumbhakarna (Jannu),Koshi,trekking,peak,0,27.683959,88.043996,7711
+274029669,Kusum Kangguru,Koshi,trekking,peak,0,27.730891,86.789296,6367
+442260822,Kyajori,Koshi,trekking,peak,0,27.909211,86.670876,6151
+4239681885,Kyashar,Koshi,trekking,peak,0,27.754876,86.822325,6769
+4526921982,Likhu Chuli,Koshi,trekking,peak,0,27.809339,86.540954,6719
+6415692719,Lunag Ri,Koshi,trekking,peak,0,28.05154,86.549735,6895
+8229137630,Malāṅphulāṅ,Koshi,trekking,peak,0,27.808159,86.865847,6573
+2689806446,Mera Peak,Koshi,trekking,peak,0,27.70984,86.868662,6476
+12473890426,Mount Frey,Koshi,trekking,peak,0,27.552159,88.096815,5889
+582068699,Narsing,Koshi,trekking,peak,0,27.511563,88.281194,5825
+2902740258,Naulekh,Koshi,trekking,peak,0,27.687583,86.90249,6363
+4537877592,Nepāl Peak,Koshi,trekking,peak,0,27.776819,88.18269,7177
+9905248502,Nirekha,Koshi,trekking,peak,0,27.977511,86.762903,6159
+4477591475,Num Ri,Koshi,trekking,peak,0,27.895829,86.973354,6635
+2906971419,Numberchuli,Koshi,trekking,peak,0,27.754223,86.572647,6959
+3213654206,Nupla,Koshi,trekking,peak,0,27.771925,86.660103,5878
+8228784773,Ombigaichen,Koshi,trekking,peak,0,27.853078,86.882962,6340
+1477924370,Pandim,Koshi,trekking,peak,0,27.577318,88.217171,6691
+1518744167,Parchemuche,Koshi,trekking,peak,0,27.837725,86.547228,6279
+4537877591,Patibhara,Koshi,trekking,peak,0,27.820586,88.173003,7140
+8228784761,Peak 41,Koshi,trekking,peak,0,27.774364,86.908035,6654
+5101762235,Phalut,Koshi,trekking,peak,0,27.213191,88.013727,3600
+442260815,Phari Lapcha,Koshi,trekking,peak,0,27.929337,86.680927,6017
+2950781582,Pokalde,Koshi,trekking,peak,0,27.924768,86.83319,5806
+3530568465,Ramthang Chang,Koshi,trekking,peak,0,27.765605,88.083591,6802
+3530571975,Ramthang Lho,Koshi,trekking,peak,0,27.751195,88.093574,6601
+2720675800,Sandakphu,Koshi,trekking,peak,0,27.104436,88.000482,3636
+1477924846,Simvo,Koshi,trekking,peak,0,27.678763,88.240521,6812
+2526437540,Taboche,Koshi,trekking,peak,0,27.897314,86.77937,6495
+4526922890,Takargo,Koshi,trekking,peak,0,27.875007,86.50888,6771
+2967492268,Talung,Koshi,trekking,peak,0,27.655563,88.131084,7349
+4526921984,Tengi Ragi Tau,Koshi,trekking,peak,0,27.857793,86.553259,6943
+3213654326,Tengkangpoche,Koshi,trekking,peak,0,27.80402,86.596449,6487
+13980988695,Tonglu,Koshi,trekking,peak,0,27.035019,88.077586,3070
+10741320069,Tsoboje,Koshi,trekking,peak,0,27.881437,86.489224,6685
+4480463432,Tutse,Koshi,trekking,peak,0,27.772931,87.099373,6758
+11867698454,Yalung Kang,Koshi,trekking,peak,0,27.705168,88.137784,8505
+12137244869,Zemu Gap Peak,Koshi,trekking,peak,0,27.687267,88.173915,7780
+288181001,ग्याचुङ काङ 格重康峰,Koshi,trekking,peak,0,28.098031,86.744844,7952
+288180659,चोयु ཇོ་བོ་དབུ་ཡ 卓奥友峰,Koshi,trekking,peak,0,28.096746,86.659634,8201
+274028194,थम्सेर्कु,Koshi,trekking,peak,0,27.789973,86.785211,6623
+3696097628,नुप्त्से १,Koshi,trekking,peak,0,27.967371,86.886963,7864
+565159946,मकालु 马卡鲁峰,Koshi,trekking,peak,0,27.891438,87.08844,8485
+2689043822,俄宗巴岗 I (丹增峰),Koshi,trekking,peak,0,28.106652,86.684876,7916
+2689043824,俄宗巴岗 II,Koshi,trekking,peak,0,28.105601,86.705496,7743
+2119333054,夏子二峰 ཤར་རྩེ་༢ शारत्से २,Koshi,trekking,peak,0,27.949674,86.983381,7457
+2677892528,孔布则峰 ཁུམ་བུ།་རྩེ खुम्बुत्से,Koshi,trekking,peak,0,28.021905,86.872193,6636
+2677892533,普莫里峰 पुमोरी,Koshi,trekking,peak,0,28.015852,86.82735,7138
+2119333575,林禅峰 लिंगट्रेन,Koshi,trekking,peak,0,28.028133,86.854493,6714
+2677892529,洛子东峰 ལྷོ་རྩེ་ཤར ल्होत्से शार,Koshi,trekking,peak,0,27.958753,86.943763,8382
+2687648806,洛子中一峰 ལྷོ་རྩེ་ཀྱི་༡ ल्होत्से मध्य १,Koshi,trekking,peak,0,27.960682,86.937589,8410
+335376854,洛子峰 ལྷོ་རྩེ ल्होत्से,Koshi,trekking,peak,0,27.961986,86.932504,8516
+1326607409,珠穆朗玛南峰 ཇོ་མོ་གླང་མལྷོ། सगरमाथा दक्षिण,Koshi,trekking,peak,0,27.985032,86.925163,8749
+164979149,珠穆朗玛峰 ཇོ་མོ་གླང་མ། सगरमाथा,Koshi,trekking,peak,0,27.988061,86.92521,8848.86
+310562749,琼桑峰 Jongsong Peak,Koshi,trekking,peak,0,27.881597,88.134974,7462
+2904495699,白当策 པེ་ཐང་རྩེ पेथाङ्त्से,Koshi,trekking,peak,0,27.957236,87.015204,6739
+10235501347,Butwal CIty viewpoint,Lumbini,hiking,viewpoint,0,27.727075,83.455531,
+12827978547,Hill park Top station,Lumbini,hiking,viewpoint,0,27.700875,83.47255,
+2807805450,Himalaya ViewPoint Arkhaban Hill,Lumbini,hiking,viewpoint,0,28.217339,83.114355,
+4988573228,JEETENDRA KUMAR VISHWAKARMA,Lumbini,hiking,viewpoint,0,26.52448,83.7699,
+4588498589,Jagdishpur Reservoir,Lumbini,hiking,viewpoint,0,27.626864,83.101443,
+6636692797,Musahari chauraha,Lumbini,hiking,viewpoint,0,27.404992,83.040636,
+7625618304,Purandhara Jharana,Lumbini,hiking,waterfall,100,28.185294,82.062048,
+9526708533,Rajapani Tourism Place,Lumbini,hiking,viewpoint,0,27.672664,83.251542,
+12193629204,Rice Fields,Lumbini,hiking,viewpoint,0,27.847416,83.517585,
+4177726796,Simaltari,Lumbini,hiking,viewpoint,0,28.174762,83.128869,
+12193629203,Suspension Bridge,Lumbini,hiking,viewpoint,0,27.840465,83.522208,
+4275697999,agro industry,Lumbini,hiking,viewpoint,0,27.510421,83.522631,
+4275718895,basantapur vdc,Lumbini,hiking,viewpoint,0,27.50988,83.502704,
+10230557018,dhamma nandan,Lumbini,hiking,viewpoint,0,27.717884,83.183404,
+10155895736,water reservior,Lumbini,hiking,lake,100,28.160718,82.346811,
+9187885087,धागेछहरा,Lumbini,hiking,waterfall,100,28.229489,82.163669,
+4102825492,Akbari Gate,Lumbini,historic,monument,150,26.862164,80.907292,
+4792679675,Alliance Francais,Lumbini,historic,monument,150,26.83725,80.961863,
+4283676699,Ambedkar Memorial,Lumbini,historic,monument,150,26.846571,80.9672,
+9419786050,Ayodhya Archoeologicla Site,Lumbini,historic,monument,150,26.83897,82.232605,
+4693222093,B.P Chok,Lumbini,historic,monument,150,28.060638,81.619328,
+10878552949,Big Buddha Bell,Lumbini,historic,monument,150,26.740108,83.890248,
+9491660188,Chhatar Manzil,Lumbini,historic,monument,150,26.858692,80.932394,
+9953189545,Chhawani Shaheed Smarak Dwar,Lumbini,historic,monument,150,26.776563,82.379632,
+2254050236,Eastern Gate,Lumbini,historic,monument,150,27.576037,83.056768,
+5382411604,Gautam Buddha Marg,Lumbini,historic,monument,150,28.061017,81.625253,
+1323434287,Govt. Buddha Museum,Lumbini,historic,museum,300,26.738711,83.893248,
+13087181490,Grand Staircase,Lumbini,historic,monument,150,26.851528,81.050198,
+2218694134,Lumbini Museum,Lumbini,historic,museum,300,27.489146,83.276985,
+6144699206,Mahendra Pillar,Lumbini,historic,monument,150,27.467548,83.275174,
+4792674920,Martin Summer Palace,Lumbini,historic,monument,150,26.836904,80.96136,
+3826722123,"Raja Zalim Singh Tiraha, Chhawani",Lumbini,historic,monument,150,26.775723,82.377466,
+11283466318,"Ram Janki Tiraha, Chhawani",Lumbini,historic,monument,150,26.77738,82.375324,
+9953192772,"Rani Talash Kunwari Tiraha, Amorha Khas",Lumbini,historic,monument,150,26.764632,82.390208,
+6964126485,Satkhanda,Lumbini,historic,monument,150,26.874489,80.906065,
+10770841599,Satkhanda,Lumbini,historic,monument,150,26.874891,80.905914,
+9518424900,Siege of Cawnpore Memorial,Lumbini,historic,monument,150,26.450623,80.370108,
+9012748104,Sishaniya Kot,Lumbini,historic,monument,150,27.47477,83.088596,
+2254123783,Suddhodana's Palace,Lumbini,historic,monument,150,27.576193,83.05587,
+2254123785,Western Gate,Lumbini,historic,monument,150,27.576693,83.054808,
+9790338583,थारु संग्रहालय,Lumbini,historic,museum,300,27.657981,82.78513,
+9524776869,थारु सांस्कृतिक सङ्ग्रालय,Lumbini,historic,museum,300,28.115968,82.201606,
+13730194601,पुरानो कोट,Lumbini,historic,monument,150,28.154129,82.396867,
+6579526785,Achhte,Lumbini,popular,attraction,200,26.463959,82.818409,
+4435483391,Baluwa,Lumbini,popular,attraction,200,27.586439,83.709857,
+2876633626,Bithur,Lumbini,popular,attraction,200,26.600809,80.272229,
+4867463721,Gajedi Taal,Lumbini,popular,attraction,200,27.660917,83.275235,
+12811261101,Hill Park,Lumbini,popular,attraction,200,27.69618,83.471382,
+7802002936,Jhunki Ghat,Lumbini,popular,attraction,200,26.806671,82.197698,
+6009874590,Nepali,Lumbini,popular,attraction,200,28.126699,81.576691,
+13188225801,Pancha Sila,Lumbini,popular,attraction,200,27.469772,83.278085,
+5338661622,Safed Baradan,Lumbini,popular,attraction,200,26.852334,80.932051,
+4731492121,Sai Sadan 142A Kaushalpuri Colony,Lumbini,popular,attraction,200,26.842907,81.022152,
+5348852331,Tharu,Lumbini,popular,attraction,200,27.536231,83.754108,
+12593233700,gorakhpur haat,Lumbini,popular,attraction,200,26.754283,83.37434,
+10792915505,khetu dai house,Lumbini,popular,attraction,200,27.841424,82.743445,
+5600825221,near to gorakhpur,Lumbini,popular,attraction,200,27.310735,83.41329,
+13279110240,कालु पाण्डे डाँडा,Lumbini,popular,attraction,200,27.928489,82.913955,
+13395407175,खौसापुर लेकसाइड,Lumbini,popular,attraction,200,28.011656,82.328555,
+9300402238,गजेडी ताल,Lumbini,popular,attraction,200,27.66348,83.275031,
+13277309234,चौकी ढुंगा पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,27.938952,82.766612,
+13271652642,भिग्री खोला गुफा पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,27.992156,82.794539,
+13282488913,भिग्री खोला गुफा पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,27.992946,82.7787,
+13271652635,भुतदुला गुफा पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,27.990613,82.768127,
+5839453488,रेजीडेंसी,Lumbini,popular,attraction,200,26.860904,80.925877,
+13271899364,लसुने भिर पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,27.976585,82.750715,
+11813029170,शिव मन्दिर,Lumbini,popular,attraction,200,27.767531,82.838318,
+13271898372,सरुमारानी पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,27.978613,82.773443,
+13282488919,सिद्ध लेख पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,27.97087,82.794652,
+13271652645,सोलिघोप्ते गुफा पर्यटकिय क्षेत्र,Lumbini,popular,attraction,200,28.002948,82.774482,
+6328446858,Bhimsen Temple,Lumbini,religious,temple,100,27.564865,83.714638,
+5307974771,Korean 108-Temple Pilgrimage and Repatriation,Lumbini,religious,temple,100,27.489205,83.276067,
+6304814088,Buddha Lake,Madhesh,hiking,lake,100,26.828226,86.362412,
+5306014340,Laliguras View Point,Madhesh,hiking,viewpoint,0,27.305599,86.382949,
+4303227092,Nepal Japan Token of Love,Madhesh,hiking,viewpoint,0,27.26741,85.949719,
+3507887015,Teen Change Jharana,Madhesh,hiking,waterfall,100,27.333611,86.388106,
+5306014341,Tungane Danda View Point,Madhesh,hiking,viewpoint,0,27.323671,86.382443,
+6304813860,Viewtower,Madhesh,hiking,viewpoint,0,26.823952,86.334887,
+10875806360,Lauriya Araraj,Madhesh,historic,monument,150,26.550219,84.647578,
+9123442026,Sindhuli Gadhi Durbar Square,Madhesh,historic,museum,300,27.279473,85.956404,
+9123396465,Sindhuli Gadhi War Museum,Madhesh,historic,museum,300,27.279841,85.956134,
+8713477117,Soknaha Bazar,Madhesh,historic,monument,150,26.94814,85.677132,
+6304814089,Lama Danda,Madhesh,popular,attraction,200,26.842931,86.377071,
+5594185275,Mithila Wildlife Trust,Madhesh,popular,attraction,200,26.833168,86.054651,
+5050643390,Basudhara view point,Sudurpashchim,hiking,viewpoint,0,29.25965,80.934681,
+9883312052,Falls 135m,Sudurpashchim,hiking,waterfall,100,30.041737,80.166914,
+11082697841,Kailash Parvat Darshan Viewpoint,Sudurpashchim,hiking,viewpoint,0,30.248492,81.025011,
+9485325127,Kalitaal,Sudurpashchim,hiking,waterfall,100,29.817109,80.039101,
+6987551920,unclisfied,Sudurpashchim,hiking,waterfall,100,29.200606,81.42414,
+8612203580,Brahmdev Museum,Sudurpashchim,historic,museum,300,29.064033,80.133755,
+10933671487,Chandalkot,Sudurpashchim,historic,monument,150,29.348654,80.075339,
+13787477392,Chhangru Rakhu Cave,Sudurpashchim,historic,monument,150,30.132567,80.884796,
+10933671488,Ek Hathiya Naula,Sudurpashchim,historic,monument,150,29.355877,80.066156,
+13851059901,Gauri kund,Sudurpashchim,historic,monument,150,30.335914,80.64394,
+6602315085,Holy Cross,Sudurpashchim,historic,monument,150,29.603778,80.19614,
+10933671486,Kotwali Chabutra,Sudurpashchim,historic,monument,150,29.333909,80.084637,
+7796546957,murti,Sudurpashchim,historic,monument,150,27.937984,80.786695,
+7962545316,"Birekhola,Jharana",Sudurpashchim,popular,attraction,200,29.434558,81.45831,
+3283373319,Fort of Banasur,Sudurpashchim,popular,attraction,200,29.407252,80.050132,
+10178307118,"Lali, Lekam",Sudurpashchim,popular,attraction,200,29.666016,80.400856,
+11387798388,Mini Khaptad,Sudurpashchim,popular,attraction,200,29.313046,81.011907,
+4437212590,Musepaani,Sudurpashchim,popular,attraction,200,28.975962,80.23471,
+4439974697,Musepaani,Sudurpashchim,popular,attraction,200,28.97768,80.235655,
+3740850034,Small Water Fall Daatola,Sudurpashchim,popular,attraction,200,29.605624,81.34794,
+5714352623,कमलबजार,Sudurpashchim,popular,attraction,200,29.053143,81.33985,
+4445359689,गाउजी,Sudurpashchim,popular,attraction,200,28.985962,80.223167,
+4445359290,घुर्सुवा,Sudurpashchim,popular,attraction,200,28.968672,80.23306,
+4445359289,चौखुट्टी,Sudurpashchim,popular,attraction,200,28.972422,80.224646,
+4445360089,धरमपुर,Sudurpashchim,popular,attraction,200,28.97703,80.246988,
+4445358789,पन्चेस्वर ड्याम साइड,Sudurpashchim,popular,attraction,200,29.429714,80.2456,
+4445359390,मुक्ती,Sudurpashchim,popular,attraction,200,28.98255,80.243125,
+4440007589,मुसेपानी नदी,Sudurpashchim,popular,attraction,200,28.981195,80.230395,
+6602315185,Mostamanu Temple,Sudurpashchim,religious,temple,100,29.625997,80.195625,
+992038320,Api,Sudurpashchim,trekking,peak,0,30.005796,80.929164,7132
+5259698388,Bamba Dhura,Sudurpashchim,trekking,peak,0,30.439596,80.283691,6334
+3964893563,Bobaye,Sudurpashchim,trekking,peak,0,29.957568,81.019403,6808
+5242713137,Changuch,Sudurpashchim,trekking,peak,0,30.291658,80.040105,6322
+5244070695,Deo Damla,Sudurpashchim,trekking,peak,0,30.460552,80.019833,6620
+5247715595,Ishan Parbat,Sudurpashchim,trekking,peak,0,30.31394,80.623867,6120
+3366773716,Jethi Bahurani,Sudurpashchim,trekking,peak,0,29.881521,81.040765,6850
+5244070700,Mangraon,Sudurpashchim,trekking,peak,0,30.474923,80.010735,6568
+299567219,Nanda Kot,Sudurpashchim,trekking,peak,0,30.281083,80.066777,6861
+3966626560,Om Parvat,Sudurpashchim,trekking,peak,0,30.196944,81.032724,5572
+2229189885,Saipal,Sudurpashchim,trekking,peak,0,29.888131,81.493483,7031
+5259748222,Suj Tilla East,Sudurpashchim,trekking,peak,0,30.331501,80.380455,6373
