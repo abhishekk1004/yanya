@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %}Your profile — Yanya{% endblock %}
+
+{% block content %}
+<h1>Hello, {{ user.username }}</h1>
+<div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));margin-top:1rem">
+  <div class="glass" style="padding:1.1rem">
+    <h3>Your travel style</h3>
+    {% for key, value in preference.weights.items %}
+      {% if value > 0 %}<span class="tag on">{{ key }}</span>{% endif %}
+    {% endfor %}
+    <p style="margin-top:0.9rem"><a class="btn secondary" href="{% url 'quiz' %}">Edit style</a></p>
+  </div>
+  <div class="glass" style="padding:1.1rem">
+    <h3>Trip filters</h3>
+    <div class="meta">budget — NPR {{ preference.budget_npr }}</div>
+    <div class="meta">max difficulty — {{ preference.get_max_difficulty_display }}</div>
+  </div>
+</div>
+{% endblock %}
