@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% block title %}Destinations — Yanya{% endblock %}
+
+{% block content %}
+<h1>Where to, in Nepal?</h1>
+
+<div class="search-wrap">
+  <label for="q" class="sr-only">Search places</label>
+  <input id="q" type="search" name="q" placeholder="Search a place — temple, lake, trek…"
+         autocomplete="off"
+         hx-get="{% url 'destination-suggest' %}" hx-target="#suggest-box"
+         hx-trigger="keyup changed delay:200ms, focus">
+  <div id="suggest-box"></div>
+</div>
+
+<form class="field-row" method="get" style="margin:1.1rem 0">
+  <div>
+    <label for="f-province">Province</label>
+    <select id="f-province" name="province" onchange="this.form.submit()">
+      <option value="">All provinces</option>
+      {% for p in provinces %}<option value="{{ p.slug }}" {% if selected.province == p.slug %}selected{% endif %}>{{ p.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="f-category">I'm into</label>
+    <select id="f-category" name="category" onchange="this.form.submit()">
+      <option value="">Everything</option>
+      {% for c in categories %}<option value="{{ c.key }}" {% if selected.category == c.key %}selected{% endif %}>{{ c.label }}</option>{% endfor %}
+    </select>
+  </div>
+</form>
+
+{% if picked %}
+  <div class="section-title"><h2>Picked for you</h2><span class="sub">content + collaborative (hybrid)</span></div>
+  <div class="cards">{% for d in picked %}{% include 'partials/photo_card.html' %}{% endfor %}</div>
+{% endif %}
+
+{% if travellers_loved %}
+  <div class="section-title"><h2>Travellers like you loved</h2><span class="sub">from similar people's ratings</span></div>
+  <div class="cards">{% for d in travellers_loved %}{% include 'partials/photo_card.html' %}{% endfor %}</div>
+{% endif %}
+
+<div class="section-title"><h2>{% if selected.province or selected.category %}Matches{% else %}Explore all{% endif %}</h2></div>
+{% include 'partials/destination_grid.html' %}
+
+{% include 'partials/slider.html' with slider_title="More of Nepal" %}
+{% endblock %}
