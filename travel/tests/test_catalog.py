@@ -1,4 +1,3 @@
-"""Phase 2 — catalog API: destinations, popular, provinces?include=spots."""
 import pytest
 
 from .conftest import make_destination
@@ -36,7 +35,6 @@ def test_destinations_search(api, seeded):
 
 
 def test_popular_orders_by_popularity(api, seeded):
-    # Popularity baseline is set by seed_provinces; here set it explicitly.
     from travel.models import Destination
     Destination.objects.filter(name="Temple A").update(popularity=90)
     Destination.objects.filter(name="Trek B").update(popularity=10)

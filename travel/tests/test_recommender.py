@@ -1,5 +1,4 @@
-"""Phase 3 — recommender: cold start, differentiation, behavioural blend,
-hard filters, and the offline evaluation beating the baselines."""
+
 import pytest
 
 from travel.evaluation import evaluate, synth_dataset
@@ -52,7 +51,7 @@ def test_no_taste_falls_back_to_popularity(catalog):
     catalog["trek"].popularity = 99
     catalog["trek"].save()
     blank = User.objects.create_user("blank", "blank@x.com", "trekNepal123")
-    # No quiz weights, no interactions -> popularity ordering, non-empty.
+
     top = recommend(blank, top_n=3)
     assert top and top[0].destination.name == "Trek"
 
@@ -63,8 +62,7 @@ def _score_of(user, name):
 
 
 def test_behaviour_shifts_taste(catalog):
-    # Start trek-leaning; religious/historic signals should raise the temple's
-    # score (behaviour is weighted more as interactions accumulate).
+
     u = _mkuser("mix", {"trekking": 0.6, "adventure": 0.5, "religious": 0.1,
                         "historic": 0.0, "hiking": 0.3, "popular": 0.2})
     before = _score_of(u, "Temple")
@@ -80,11 +78,10 @@ def test_behaviour_shifts_taste(catalog):
 def test_visited_hidden_and_budget_filter(catalog):
     u = _mkuser("b", {"trekking": 1.0, "adventure": 0.9, "hiking": 0.8,
                      "religious": 0.0, "historic": 0.0, "popular": 0.0})
-    u.preference.budget_npr = 10000  # excludes the 40000 trek
+    u.preference.budget_npr = 10000  
     u.preference.save()
     names = [s.destination.name for s in recommend(u, top_n=10)]
-    assert "Trek" not in names  # busted budget
-    # Visit the temple -> it disappears from future recommendations.
+    assert "Trek" not in names  
     Interaction.objects.create(user=u, destination=catalog["temple"],
                                event=Interaction.VISITED)
     assert "Temple" not in [s.destination.name for s in recommend(u, top_n=10)]

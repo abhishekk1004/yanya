@@ -1,5 +1,3 @@
-"""Phase 4 — itinerary optimiser: 2-opt lowers cost, budget respected, and the
-optimize endpoint returns an ordered, budget-feasible route."""
 import pytest
 
 from travel.itinerary import (
@@ -16,7 +14,6 @@ pytestmark = pytest.mark.django_db
 
 
 def _square_points():
-    # Unit-square corners; the crossing order 0-2-1-3 is suboptimal.
     return [Point(0, 27.0, 85.0, 0), Point(1, 27.0, 85.1, 0),
             Point(2, 27.1, 85.1, 0), Point(3, 27.1, 85.0, 0)]
 
@@ -27,7 +24,6 @@ def test_two_opt_reduces_or_keeps_route_cost():
     bad = [0, 2, 1, 3]
     improved = two_opt(bad, m)
     assert _route_travel(improved, m) <= _route_travel(bad, m)
-    # Strictly better for this crossing case.
     assert _route_travel(improved, m) < _route_travel(bad, m)
 
 
@@ -39,7 +35,6 @@ def test_route_within_budget_drops_stops():
         Point(4, 27.2, 85.0, 20000),
     ]
     route = optimize(pts, budget_npr=45000, start_index=0)
-    # Two 20k visits already hit 40k; a third busts 45k → at least two dropped.
     assert route.total_cost_npr <= 45000
     assert len(route.order) <= 2
     assert route.dropped
@@ -55,7 +50,7 @@ def test_four_places_route_under_budget(province, categories):
     route = optimize(pts, budget_npr=50000, start_index=0)
     assert len(route.order) == 4
     assert route.total_cost_npr <= 50000
-    assert route.order[0] == dests[0].id  # start is fixed
+    assert route.order[0] == dests[0].id 
 
 
 def test_optimize_endpoint(auth_api, province, categories):

@@ -1,4 +1,3 @@
-"""Phase 0 — auth, JWT and /api/me."""
 import pytest
 
 pytestmark = pytest.mark.django_db
@@ -14,7 +13,7 @@ def test_signup_creates_user_with_profile_and_preference(api):
     from travel.models import User
 
     user = User.objects.get(username="ram")
-    # Signal auto-provisioned the 1:1 rows.
+
     assert user.profile is not None
     assert user.preference is not None
 
@@ -45,5 +44,4 @@ def test_update_preferences_marks_quiz_complete(auth_api):
     body = resp.json()
     assert body["quiz_completed"] is True
     assert body["weights"]["trekking"] == 1.0
-    # Unlisted categories are coerced to 0.0 over the full vocabulary.
     assert body["weights"]["religious"] == 0.0
