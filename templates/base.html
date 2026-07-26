@@ -1,0 +1,47 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}Yanya — explore Nepal{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'css/app.css' %}">
+  {% block head %}{% endblock %}
+  <script src="https://unpkg.com/htmx.org@1.9.12" defer></script>
+</head>
+<body hx-headers='{"X-CSRFToken": "{{ csrf_token }}"}'>
+  <header class="nav">
+    <div class="container row">
+      <a class="brand" href="{% url 'home' %}">{% include 'partials/pennant.html' %} Yanya</a>
+      <a class="hide-sm {% if request.resolver_match.url_name == 'destinations' %}active{% endif %}" href="{% url 'destinations' %}">Destinations</a>
+      <a class="hide-sm {% if request.resolver_match.url_name == 'stays' %}active{% endif %}" href="{% url 'stays' %}">Stays</a>
+      <a class="hide-sm {% if request.resolver_match.url_name == 'favourites' %}active{% endif %}" href="{% url 'favourites' %}">Your choices</a>
+      <a class="hide-sm {% if request.resolver_match.url_name == 'vasatyayam' %}active{% endif %}" href="{% url 'vasatyayam' %}">Vasatyayam</a>
+      {% if user.is_authenticated %}<a class="hide-sm {% if request.resolver_match.url_name == 'trips' %}active{% endif %}" href="{% url 'trips' %}">My trips</a>{% endif %}
+      <span class="spacer"></span>
+      {% if user.is_authenticated %}
+        <a href="{% url 'profile' %}">{{ user.username }}</a>
+        <form method="post" action="{% url 'logout' %}" style="margin:0">{% csrf_token %}
+          <button class="btn ghost" type="submit">Log out</button>
+        </form>
+      {% else %}
+        <a href="{% url 'login' %}">Log in</a>
+        <a class="btn" href="{% url 'signup' %}">Sign up</a>
+      {% endif %}
+    </div>
+  </header>
+
+  <main class="container" style="padding-bottom:2rem">
+    {% if messages %}
+      <ul class="messages">{% for m in messages %}<li class="{{ m.tags }}">{{ m }}</li>{% endfor %}</ul>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer><div class="container">{% include 'partials/pennant.html' %} Yanya · explore Nepal's 7 provinces</div></footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>
