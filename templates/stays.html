@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block title %}Stays — Yanya{% endblock %}
+
+{% block content %}
+<h1>Where to stay</h1>
+<p class="meta">Hotels matched to your budget and taste — the best fits are shown first.</p>
+
+<form class="field-row" method="get" style="margin:0.9rem 0">
+  <div>
+    <label for="f-province">Province</label>
+    <select id="f-province" name="province" onchange="this.form.submit()">
+      <option value="">All provinces</option>
+      {% for p in provinces %}<option value="{{ p.slug }}" {% if selected.province == p.slug %}selected{% endif %}>{{ p.name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div>
+    <label for="f-budget">Budget per night (NPR)</label>
+    <input id="f-budget" type="number" name="budget" min="500" step="500" value="{{ selected.budget }}"
+           onchange="this.form.submit()">
+  </div>
+</form>
+
+<div class="cards">
+  {% for h in hotels %}
+    <article class="pcard" style="--grad:linear-gradient(135deg,#12324f,#2f7fb5)">
+      {% if h.image_url %}<div class="ph"><img loading="lazy" src="{{ h.image_url }}" alt="" onerror="this.closest('.ph').remove()"></div>{% endif %}
+      <div class="scrim"></div>
+      <div class="body">
+        <h3>{{ h.name }}</h3>
+        <div class="meta">{{ h.city }}, {{ h.province.name }} · NPR {{ h.price_npr }}/night · {{ h.star_rating }}★</div>
+        {% if forloop.first %}<div style="margin-top:0.5rem"><span class="tag on">Best match</span></div>{% endif %}
+      </div>
+    </article>
+  {% empty %}
+    <p class="meta">No hotels found for that filter.</p>
+  {% endfor %}
+</div>
+{% endblock %}
