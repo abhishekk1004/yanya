@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block title %}Your choices — Yanya{% endblock %}
+
+{% block content %}
+<h1>Your choices</h1>
+<p class="meta">Places you saved. Ready? Plan them into a trip.</p>
+
+{% if saved %}
+  <div class="map-controls" style="justify-content:flex-start;margin:0.8rem 0">
+    <a class="btn lg" href="{% url 'vasatyayam' %}?{% for d in saved %}d={{ d.id }}&{% endfor %}">Plan these in Vasatyayam →</a>
+  </div>
+  <div class="cards">{% for d in saved %}{% include 'partials/photo_card.html' %}{% endfor %}</div>
+
+  {% if also_like %}
+    <div class="section-title"><h2>You might also like</h2><span class="sub">similar to your choices</span></div>
+    <div class="cards">{% for d in also_like %}{% include 'partials/photo_card.html' %}{% endfor %}</div>
+  {% endif %}
+{% else %}
+  <div class="glass" style="padding:1.4rem;max-width:560px">
+    <p>Nothing saved yet. Tap <strong>♥ Save</strong> on any place in
+      <a href="{% url 'destinations' %}">Destinations</a> to add it here.</p>
+  </div>
+{% endif %}
+{% endblock %}
