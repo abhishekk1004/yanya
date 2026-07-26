@@ -1,9 +1,3 @@
-"""Seed data: Nepal's 7 provinces and their famous spots with category-weight
-feature vectors. Weights are in [0, 1] over CATEGORY_KEYS; only nonzero axes are
-listed. Coordinates and costs are realistic but approximate.
-"""
-
-# order = official Province No. 1–7 (east → west), used by the home-map cycle.
 PROVINCES = [
     {
         "name": "Koshi", "slug": "koshi", "order": 1,
@@ -159,4 +153,38 @@ PROVINCES = [
              "w": {"popular": 0.4, "adventure": 0.3}},
         ],
     },
+]
+
+
+# --- Demo hotels (per province) --------------------------------------------
+# (name, province_slug, city, price_npr/night, star_rating, lat, lng)
+HOTELS = [
+    ("Hotel Everest View", "koshi", "Namche", 12000, 4.5, 27.81, 86.71),
+    ("Dharan Grand", "koshi", "Dharan", 4500, 3.5, 26.81, 87.28),
+    ("Summit Lodge Ilam", "koshi", "Ilam", 2800, 3.0, 26.91, 87.93),
+    ("Janaki Residency", "madhesh", "Janakpur", 3500, 3.5, 26.73, 85.92),
+    ("Mithila Palace", "madhesh", "Janakpur", 6500, 4.0, 26.74, 85.93),
+    ("Hotel Yak & Yeti", "bagmati", "Kathmandu", 15000, 5.0, 27.71, 85.32),
+    ("Thamel Boutique", "bagmati", "Kathmandu", 5000, 4.0, 27.72, 85.31),
+    ("Nagarkot Sunrise Inn", "bagmati", "Nagarkot", 3800, 3.5, 27.72, 85.52),
+    ("Backpacker Kathmandu", "bagmati", "Kathmandu", 1800, 2.5, 27.70, 85.31),
+    ("Lake Palace Pokhara", "gandaki", "Pokhara", 9000, 4.5, 28.21, 83.96),
+    ("Fishtail Lodge", "gandaki", "Pokhara", 6000, 4.0, 28.20, 83.95),
+    ("Sarangkot View", "gandaki", "Sarangkot", 3200, 3.0, 28.24, 83.95),
+    ("Lumbini Garden Hotel", "lumbini", "Lumbini", 5500, 4.0, 27.47, 83.28),
+    ("Buddha Maya Resort", "lumbini", "Lumbini", 8500, 4.5, 27.48, 83.27),
+    ("Tansen Heritage", "lumbini", "Tansen", 2600, 3.0, 27.87, 83.55),
+    ("Rara Lakeside Camp", "karnali", "Rara", 4200, 3.5, 29.52, 82.08),
+    ("Jumla Guest House", "karnali", "Jumla", 2200, 2.5, 29.28, 82.18),
+    ("Khaptad Eco Lodge", "sudurpashchim", "Khaptad", 3000, 3.0, 29.38, 81.13),
+    ("Dhangadhi Comfort Inn", "sudurpashchim", "Dhangadhi", 3600, 3.5, 28.70, 80.59),
+]
+
+
+TRANSPORT_MODES = [
+    ("Local bus", "🚌", 100, 4.0, 35, 2, 0),
+    ("Tourist bus", "🚐", 500, 9.0, 45, 3, 0),
+    ("Shared jeep", "🚙", 300, 14.0, 40, 3, 0),
+    ("Private car", "🚗", 1500, 40.0, 55, 4, 0),
+    ("Domestic flight", "✈️", 6000, 22.0, 500, 5, 150),
 ]

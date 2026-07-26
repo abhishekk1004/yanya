@@ -1,12 +1,3 @@
-"""Write an explicit 80/20 train/test split of a ratings CSV.
-
-Produces ``ratings_train.csv`` and ``ratings_test.csv`` next to the input so an
-assignment can show the two files directly. The split is stratified per user
-(each user contributes ~80% of their ratings to train, ~20% to test), which is
-exactly what the evaluator does internally.
-
-    python manage.py split_dataset data/ratings.csv --test-frac 0.2
-"""
 import csv
 import os
 from collections import defaultdict
@@ -33,7 +24,7 @@ class Command(BaseCommand):
             header = next(reader)
             rows = list(reader)
 
-        # Group row indices by user (first column) for a per-user split.
+
         by_user: dict[str, list[int]] = defaultdict(list)
         for i, row in enumerate(rows):
             by_user[row[0]].append(i)

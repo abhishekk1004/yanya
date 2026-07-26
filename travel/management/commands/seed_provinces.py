@@ -1,17 +1,19 @@
-"""Seed the 6 categories, 7 provinces and their famous spots.
-
-Idempotent: re-running updates existing rows (keyed by slug/key) and never
-duplicates. Popularity is left at 0 here; the nightly Celery task computes it
-from interactions. Run: ``python manage.py seed_provinces``.
-"""
 from django.core.management.base import BaseCommand
 from django.db import transaction
 from django.utils.text import slugify
 
 from travel.constants import CATEGORY_KEYS, CATEGORY_LABELS
-from travel.models import Category, Destination, DestinationCategory, Province
+from travel.media import PROVINCE_COVER, SPOT_IMAGE
+from travel.models import (
+    Category,
+    Destination,
+    DestinationCategory,
+    Hotel,
+    Province,
+    TransportMode,
+)
 
-from ._seed_data import PROVINCES
+from ._seed_data import HOTELS, PROVINCES, TRANSPORT_MODES
 
 
 class Command(BaseCommand):
@@ -19,7 +21,6 @@ class Command(BaseCommand):
 
     @transaction.atomic
     def handle(self, *args, **options) -> None:
-        # Time/space: O(spots × categories) — a few dozen rows; trivial.
         categories = {
             key: Category.objects.update_or_create(
                 key=key, defaults={"label": CATEGORY_LABELS[key]}
@@ -35,6 +36,7 @@ class Command(BaseCommand):
                     "order": pdata["order"],
                     "center_lat": pdata["center_lat"],
                     "center_lng": pdata["center_lng"],
+                    "cover_url": PROVINCE_COVER.get(pdata["slug"], ""),
                 },
             )
             n_prov += 1
@@ -50,9 +52,9 @@ class Command(BaseCommand):
                         "difficulty": spot["difficulty"],
                         "best_season": spot["best_season"],
                         "is_featured": True,
-                        # Baseline popularity from the "popular" axis so the
-                        # /popular list is meaningful before any interactions.
-                        # The nightly task overwrites this with a blended score.
+                        "image_url": SPOT_IMAGE.get(
+                            spot.get("slug", slugify(spot["name"])), ""
+                        ),
                         "popularity": round(spot["w"].get("popular", 0.0) * 100, 1),
                     },
                 )
@@ -63,9 +65,30 @@ class Command(BaseCommand):
                         category=categories[key],
                         defaults={"weight": weight},
                     )
+        # Hotels (demo) — keyed by name within province.
+        provinces = {p.slug: p for p in Province.objects.all()}
+        n_hotel = 0
+        for name, pslug, city, price, star, lat, lng in HOTELS:
+            Hotel.objects.update_or_create(
+                name=name, province=provinces[pslug],
+                defaults={"city": city, "price_npr": price, "star_rating": star,
+                          "lat": lat, "lng": lng},
+            )
+            n_hotel += 1
+
+
+        n_mode = 0
+        for name, emoji, base, per_km, speed, comfort, min_km in TRANSPORT_MODES:
+            TransportMode.objects.update_or_create(
+                name=name,
+                defaults={"emoji": emoji, "base_fare_npr": base, "per_km_npr": per_km,
+                          "speed_kmph": speed, "comfort": comfort, "min_km": min_km},
+            )
+            n_mode += 1
+
         self.stdout.write(
             self.style.SUCCESS(
                 f"Seeded {len(categories)} categories, {n_prov} provinces, "
-                f"{n_spot} spots."
+                f"{n_spot} spots, {n_hotel} hotels, {n_mode} transport modes."
             )
         )

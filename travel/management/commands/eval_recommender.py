@@ -1,12 +1,3 @@
-"""Evaluate the content-based recommender with an 80/20 split.
-
-Runs fully offline on synthetic data by default; point it at a real Kaggle
-tourism dataset with --places / --ratings. Prints RMSE/MAE (vs a mean-rating
-baseline) and Recall@K (vs a random-ranking baseline).
-
-    python manage.py eval_recommender
-    python manage.py eval_recommender --places data/places.csv --ratings data/ratings.csv
-"""
 from django.core.management.base import BaseCommand
 
 from travel.evaluation import evaluate, load_csv, synth_dataset

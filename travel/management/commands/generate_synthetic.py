@@ -1,10 +1,3 @@
-"""Write a synthetic tourism dataset (places.csv + ratings.csv) sharing the same
-schema as a real Kaggle tourism dataset, so the eval pipeline runs with no
-network. Each place gets a single free-text ``category`` (Kaggle-style) that the
-loader maps onto the six category keys.
-
-    python manage.py generate_synthetic --out data/
-"""
 import csv
 import os
 
@@ -13,8 +6,7 @@ from django.core.management.base import BaseCommand
 
 from travel.constants import CATEGORY_KEYS
 
-# One representative Kaggle-style category label per key (round-trips via
-# evaluation.CATEGORY_MAP).
+
 RAW_LABEL = {
     "adventure": "adventure", "historic": "heritage", "religious": "temple",
     "hiking": "hill station", "trekking": "trek", "popular": "city",
@@ -39,7 +31,7 @@ class Command(BaseCommand):
         os.makedirs(opts["out"], exist_ok=True)
         n_places, n_users = opts["places"], opts["users"]
 
-        # Each place has one dominant category (like a Kaggle "Type" column).
+
         place_cat = {}
         places_path = os.path.join(opts["out"], "places.csv")
         with open(places_path, "w", newline="") as fh:
@@ -56,7 +48,7 @@ class Command(BaseCommand):
                     round(26 + rng.random() * 4, 4), round(80 + rng.random() * 8, 4),
                 ])
 
-        # Users prefer 1–2 categories; rate places, higher when category matches.
+
         ratings_path = os.path.join(opts["out"], "ratings.csv")
         with open(ratings_path, "w", newline="") as fh:
             w = csv.writer(fh)
