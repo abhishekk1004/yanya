@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Your travel style — Yanya{% endblock %}
+
+{% block content %}
+<div style="max-width:680px;margin-inline:auto">
+  <div class="stepper-bar"><i id="bar" style="width:50%"></i></div>
+
+  <form method="post" id="quiz-form">
+    {% csrf_token %}
+    {% for i in interests %}<input type="hidden" name="{{ i.key }}" id="w-{{ i.key }}" value="0">{% endfor %}
+    <input type="hidden" name="budget_npr" id="budget_npr" value="{{ preference.budget_npr }}">
+    <input type="hidden" name="max_difficulty" id="max_difficulty" value="{{ preference.max_difficulty }}">
+
+    <!-- Step 1: interests -->
+    <section class="step active" data-step="1">
+      <h1>What do you love?</h1>
+      <p class="meta">Tap all that fit.</p>
+      <div class="opt-grid">
+        {% for i in interests %}
+          <div class="opt" role="button" tabindex="0" data-key="{{ i.key }}">
+            <span class="emoji" data-emoji="{{ i.key }}"></span>{{ i.label }}
+          </div>
+        {% endfor %}
+      </div>
+      <button class="btn lg" type="button" onclick="go(2)">Next →</button>
+    </section>
+
+    <!-- Step 2: budget + pace -->
+    <section class="step" data-step="2">
+      <h1>Your budget?</h1>
+      <p class="meta">Per trip, roughly.</p>
+      <div class="opt-grid" id="budget-grid">
+        <div class="opt" role="button" tabindex="0" data-budget="25000"><span class="emoji">🎒</span>NPR 25k</div>
+        <div class="opt" role="button" tabindex="0" data-budget="50000"><span class="emoji">🧭</span>NPR 50k</div>
+        <div class="opt" role="button" tabindex="0" data-budget="100000"><span class="emoji">✨</span>NPR 100k</div>
+        <div class="opt" role="button" tabindex="0" data-budget="200000"><span class="emoji">👑</span>NPR 200k+</div>
+      </div>
+      <h1 style="margin-top:1.2rem">How hard can it get?</h1>
+      <div class="opt-grid" id="diff-grid">
+        <div class="opt" role="button" tabindex="0" data-diff="2"><span class="emoji">🌿</span>Easy</div>
+        <div class="opt" role="button" tabindex="0" data-diff="3"><span class="emoji">⛰️</span>Moderate</div>
+        <div class="opt" role="button" tabindex="0" data-diff="5"><span class="emoji">🔥</span>Anything</div>
+      </div>
+      <div style="display:flex;gap:0.6rem">
+        <button class="btn secondary" type="button" onclick="go(1)">← Back</button>
+        <button class="btn lg" type="submit">See my Nepal →</button>
+      </div>
+    </section>
+  </form>
+</div>
+
+<script>
+  var EMOJI = {adventure:"🪂", historic:"🏛️", religious:"🛕", hiking:"🥾", trekking:"🏔️", popular:"⭐"};
+  document.querySelectorAll("[data-emoji]").forEach(function (s) { s.textContent = EMOJI[s.dataset.emoji] || "•"; });
+
+  function go(n) {
+    document.querySelectorAll(".step").forEach(function (s) { s.classList.toggle("active", s.dataset.step == n); });
+    document.getElementById("bar").style.width = (n * 50) + "%";
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+  // Interests: toggle → weight 100/0
+  document.querySelectorAll(".opt[data-key]").forEach(function (o) {
+    function toggle() {
+      o.classList.toggle("sel");
+      document.getElementById("w-" + o.dataset.key).value = o.classList.contains("sel") ? 100 : 0;
+    }
+    o.addEventListener("click", toggle);
+    o.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); toggle(); } });
+  });
+  // Single-select helper for budget / difficulty
+  function single(gridId, attr, targetId) {
+    var grid = document.getElementById(gridId);
+    grid.querySelectorAll(".opt").forEach(function (o) {
+      o.addEventListener("click", function () {
+        grid.querySelectorAll(".opt").forEach(function (x) { x.classList.remove("sel"); });
+        o.classList.add("sel");
+        document.getElementById(targetId).value = o.dataset[attr];
+      });
+    });
+  }
+  single("budget-grid", "budget", "budget_npr");
+  single("diff-grid", "diff", "max_difficulty");
+</script>
+{% endblock %}
