@@ -1,0 +1,12 @@
+{# HTMX autosuggest dropdown for the destinations search box. #}
+{% if matches %}
+  <div class="glass suggest">
+    {% for d in matches %}
+      <a href="{% url 'vasatyayam' %}?d={{ d.id }}">
+        {% if d.image_url %}<img src="{{ d.image_url }}" alt="" onerror="this.style.visibility='hidden'">
+        {% else %}<span class="thumb"></span>{% endif %}
+        <span><strong>{{ d.name }}</strong><br><span class="meta">{{ d.province.name }} · NPR {{ d.cost_npr }}</span></span>
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}

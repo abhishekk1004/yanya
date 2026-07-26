@@ -1,0 +1,5 @@
+{# Self-replacing ♥ toggle. Posts to save-toggle; HTMX swaps in the new state. #}
+<button class="chip-btn{% if saved %} saved{% endif %}" type="button"
+        hx-post="{% url 'save-toggle' d.id %}" hx-swap="outerHTML">
+  {% if saved %}♥ Saved{% else %}♡ Save{% endif %}
+</button>

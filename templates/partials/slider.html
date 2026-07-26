@@ -1,0 +1,14 @@
+{# Reusable image slider. Expects `gallery` (list of {title,url}) and `title`. #}
+<div class="section-title"><h2>{{ slider_title|default:"Beauty of Nepal" }}</h2>
+  <span class="sub">swipe →</span></div>
+<div class="slider">
+  <div class="slider-track">
+    {% for g in gallery %}
+      <div class="slide">
+        <img loading="lazy" src="{{ g.url }}" alt="{{ g.title }}"
+             onerror="this.style.display='none'">
+        <div class="cap">{{ g.title }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</div>

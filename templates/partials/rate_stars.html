@@ -1,0 +1,10 @@
+{# Star rating widget. Clicking a star posts it and swaps in the new state. #}
+<span class="rate-stars" role="group" aria-label="Rate this place">
+  {% for i in "12345" %}
+    <button type="button" class="star{% if forloop.counter <= rating %} on{% endif %}"
+            hx-post="{% url 'rate-place' d.id %}" hx-vals='{"stars": {{ forloop.counter }}}'
+            hx-target="closest .rate-stars" hx-swap="outerHTML"
+            aria-label="{{ forloop.counter }} star{{ forloop.counter|pluralize }}">★</button>
+  {% endfor %}
+  {% if rating %}<span class="meta rate-num">{{ rating }}/5</span>{% endif %}
+</span>

@@ -1,0 +1,7 @@
+{% if destinations %}
+  <div class="cards" id="destination-grid">
+    {% for d in destinations %}{% include 'partials/photo_card.html' %}{% endfor %}
+  </div>
+{% else %}
+  <p class="meta" id="destination-grid">No places match those filters yet.</p>
+{% endif %}

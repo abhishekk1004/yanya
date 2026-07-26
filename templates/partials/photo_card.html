@@ -1,0 +1,22 @@
+{% load yanya_extras %}
+{# Renders one destination `d` as a liquid glass photo card. #}
+<article class="pcard" style="--grad:{{ d|card_gradient }}">
+  {% if d.image_url %}
+    <div class="ph"><img loading="lazy" src="{{ d.image_url }}" alt="{{ d.name }}"
+         onerror="this.closest('.ph').remove()"></div>
+  {% endif %}
+  <div class="scrim"></div>
+  <div class="body">
+    <h3>{{ d.name }}</h3>
+    <div class="meta">{{ d.province.name }} · NPR {{ d.cost_npr }} · {{ d.get_difficulty_display }}</div>
+    <div style="margin-top:0.4rem">
+      {% for label in d|top_tags %}<span class="tag on">{{ label }}</span>{% endfor %}
+    </div>
+    {% if user.is_authenticated %}
+      <div class="row">
+        {% include 'partials/save_button.html' with d=d saved=d.is_saved %}
+        <a class="chip-btn" href="{% url 'vasatyayam' %}?d={{ d.id }}">Plan trip</a>
+      </div>
+    {% endif %}
+  </div>
+</article>
