@@ -1,12 +1,9 @@
-/* Vasatyayam: pick destinations → POST /api/itineraries/optimize, draw the route,
-   show a full budget/days/distance breakdown, and recommend similar trips.
-   Session auth, so unsafe requests carry the CSRF token. */
 (function () {
   "use strict";
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var CRIMSON = "#dc143c";
 
-  // Map is optional: if Leaflet fails to load, search + itinerary still work.
+
   var map = null, routeLayer = null;
   try {
     map = L.map("map", { scrollWheelZoom: false }).setView([28.2, 84.0], 6.4);
@@ -20,8 +17,8 @@
   }
 
   var lastRoute = null;
-  var customStops = [];       // stops along the way: {name, lat, lng, cost}
-  var fromPlace = null, toPlace = null;  // From / To endpoints
+  var customStops = [];       
+  var fromPlace = null, toPlace = null; 
 
   function picks() {
     return [].slice.call(document.querySelectorAll(".pick:checked")).map(function (e) { return +e.value; });
@@ -31,8 +28,7 @@
   }
   function npr(n) { return "NPR " + Number(n).toLocaleString("en-IN"); }
 
-  // Geocode a query and render clickable result buttons. Returns nothing; calls
-  // onPick(place) when the user taps a result.
+
   function runGeo(q, out, onPick) {
     q = (q || "").trim();
     if (q.length < 3) { out.innerHTML = '<span class="meta">Keep typing…</span>'; return; }
@@ -62,7 +58,7 @@
       });
   }
 
-  // Wire an input + results box for live autosuggest (debounced) + Enter + button.
+
   function wireGeo(inputId, resId, btnId, onPick) {
     var input = document.getElementById(inputId);
     var out = document.getElementById(resId);
@@ -76,7 +72,7 @@
     if (btnId) document.getElementById(btnId).addEventListener("click", go);
   }
 
-  // --- From / To endpoints ---
+
   wireGeo("from-q", "from-res", "from-find", function (row) {
     fromPlace = { name: row.name, lat: row.lat, lng: row.lng, cost: 0 };
     document.getElementById("from-q").value = row.name;
@@ -88,7 +84,7 @@
     document.getElementById("to-res").innerHTML = '<span class="meta">✓ To ' + row.name + "</span>";
   });
 
-  // --- Stops along the way (geocoded) ---
+
   function renderChips() {
     var box = document.getElementById("custom-chips");
     box.innerHTML = "";
@@ -116,7 +112,7 @@
   }
 
   function draw(order) {
-    if (!map || !routeLayer) return;   // map optional
+    if (!map || !routeLayer) return;   
     routeLayer.clearLayers();
     var pts = [];
     order.forEach(function (s, i) {
@@ -171,7 +167,7 @@
         document.getElementById("similar-wrap").style.display = "block";
       }
 
-      // Getting around — transport options (utility-scored).
+
       var tw = document.getElementById("transport-wrap");
       if (r.transport && r.transport.length) {
         document.getElementById("transport").innerHTML = r.transport.map(function (t, i) {
@@ -183,7 +179,7 @@
         tw.style.display = "block";
       }
 
-      // Where to stay — fuzzy-ranked hotels for the trip province & nightly budget.
+
       var sw = document.getElementById("stays-wrap");
       if (r.stays && r.stays.length) {
         document.getElementById("stays-sub").textContent =
@@ -217,6 +213,6 @@
     }).catch(function () { alert("Could not save the trip."); });
   });
 
-  // If arriving with preselected picks, generate immediately.
+
   if (picks().length >= 2) document.getElementById("optimize-btn").click();
 })();

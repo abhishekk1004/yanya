@@ -1,7 +1,3 @@
-/* Home map: auto-cycles Nepal's 7 provinces 1→7, highlighting the active one
-   in crimson and dropping its famous spots as markers. Clickable chips jump to
-   a province; the tour is pausable. Fed live from /api/provinces?include=spots.
-   Respects prefers-reduced-motion (no auto-tour, no animated pan). */
 (function () {
   "use strict";
 
@@ -16,7 +12,7 @@
     maxZoom: 18,
   }).addTo(map);
 
-  // Type-specific emoji markers in a blue-outlined badge (temple, lake, …).
+
   var ICON_EMOJI = {
     lake: "🌊", temple: "🛕", mountain: "🏔️", wildlife: "🦏",
     monument: "🏛️", hill: "⛰️", star: "⭐",
@@ -37,7 +33,7 @@
   }
 
   var provinces = [];
-  var provinceLayers = [];   // centroid circle OR boundary polygon per province
+  var provinceLayers = [];   
   var spotLayer = L.layerGroup().addTo(map);
   var current = 0, timer = null, playing = !reduceMotion;
 
@@ -60,7 +56,7 @@
     current = i;
     var p = provinces[i];
 
-    // Active province: bold blue boundary outline; others faint.
+
     provinceLayers.forEach(function (layer, j) {
       layer.setStyle({
         color: j === i ? BLUE_BOLD : MUTED,
@@ -72,7 +68,7 @@
       if (j === i && layer.bringToFront) layer.bringToFront();
     });
 
-    // Drop this province's spots + fill the spot slider with image cards.
+
     spotLayer.clearLayers();
     var slider = document.getElementById("spot-slider");
     var title = document.getElementById("spot-title");
@@ -97,7 +93,7 @@
       }
     });
 
-    // Frame the province: fit its boundary if we have one, else centre on it.
+
     var active = provinceLayers[i];
     if (active && active.getBounds && active.getBounds().isValid()) {
       map.fitBounds(active.getBounds(), { padding: [30, 30], animate: !reduceMotion });
@@ -105,7 +101,7 @@
       map.setView([p.center_lat, p.center_lng], 8, { animate: !reduceMotion });
     }
 
-    // Update chips + live label.
+
     Array.prototype.forEach.call(chipsEl.children, function (c, j) {
       c.classList.toggle("active", j === i);
     });
@@ -119,7 +115,7 @@
     playing = true;
     toggleEl.textContent = "Pause tour";
     toggleEl.setAttribute("aria-pressed", "true");
-    timer = setInterval(nextProvince, 6000);  // 5–8s per province
+    timer = setInterval(nextProvince, 6000);  
   }
   function stopTour() {
     playing = false;
@@ -134,7 +130,6 @@
     .then(function (data) {
       provinces = data.sort(function (a, b) { return a.order - b.order; });
       provinces.forEach(function (p) {
-        // Real boundary polygon when loaded, else a centroid circle.
         var layer = p.boundary_geojson
           ? L.geoJSON(p.boundary_geojson, { style: { color: MUTED, weight: 1, fillOpacity: 0 } })
           : L.circleMarker([p.center_lat, p.center_lng], { radius: 12, color: MUTED, weight: 1, fillOpacity: 0 });
