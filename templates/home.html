@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Yanya — explore Nepal{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+{% endblock %}
+
+{% block content %}
+<div class="map-wrap">
+  <div id="map" role="region" aria-label="Interactive map of Nepal's provinces"></div>
+  <div class="map-badge glass" id="current-province" aria-live="polite">Loading Nepal…</div>
+</div>
+
+<div class="province-chips" id="province-chips" aria-label="Jump to a province"></div>
+<div class="map-controls">
+  <button class="btn secondary" id="toggle-tour" type="button" aria-pressed="true">Pause</button>
+  <a class="btn lg" href="{% url 'destinations' %}">Explore more →</a>
+</div>
+
+<div class="section-title"><h2 id="spot-title">Famous spots</h2><span class="sub">of the province in view</span></div>
+<div class="slider"><div class="slider-track" id="spot-slider"></div></div>
+
+{% include 'partials/slider.html' with slider_title="Beauty of Nepal" %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="{% static 'js/map.js' %}" defer></script>
+{% endblock %}
