@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Vasatyayam — plan your Nepal trip{% endblock %}
+
+{% block head %}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+{% endblock %}
+
+{% block content %}
+<h1>Vasatyayam</h1>
+<p class="meta">Pick places, set a budget — we order them into the best, budget-feasible trip.</p>
+
+<!-- Route planner controls: sit ABOVE the map -->
+<div class="glass" style="padding:1.1rem;margin:0.8rem 0">
+  <div class="field-row">
+    <div><label for="trip-name">Trip name</label><input id="trip-name" type="text" value="My Nepal trip"></div>
+    <div><label for="trip-budget">Budget (NPR)</label>
+      <input id="trip-budget" type="number" min="0" step="1000" value="{{ budget_default }}"></div>
+  </div>
+
+  <div class="field-row">
+    <div>
+      <label for="from-q">From — where you start</label>
+      <div style="display:flex;gap:0.5rem"><input id="from-q" type="text" placeholder="Type a city, e.g. Kathmandu" style="margin:0">
+        <button class="btn secondary" id="from-find" type="button">Search</button></div>
+      <div id="from-res" class="meta" style="margin-top:0.3rem"></div>
+    </div>
+    <div>
+      <label for="to-q">Destination — your final stop</label>
+      <div style="display:flex;gap:0.5rem"><input id="to-q" type="text" placeholder="Type a city, e.g. Pokhara" style="margin:0">
+        <button class="btn secondary" id="to-find" type="button">Search</button></div>
+      <div id="to-res" class="meta" style="margin-top:0.3rem"></div>
+    </div>
+  </div>
+
+  <label for="custom-q" style="margin-top:0.4rem">Add stops along the way — any place in Nepal</label>
+  <div style="display:flex;gap:0.5rem"><input id="custom-q" type="text" placeholder="e.g. Bandipur, Gosaikunda, Tilicho lake" style="margin:0">
+    <button class="btn secondary" id="find-btn" type="button">Find</button></div>
+  <div id="geo-results" class="meta" style="margin-top:0.4rem"></div>
+  <div id="custom-chips" class="row" style="margin-top:0.5rem"></div>
+
+  <div class="map-controls" style="justify-content:flex-start;margin-top:0.9rem">
+    <button class="btn lg" id="optimize-btn" type="button">Generate itinerary</button>
+    <button class="btn secondary" id="save-btn" type="button" disabled>Save trip</button>
+  </div>
+</div>
+
+<div class="map-wrap"><div id="map" role="region" aria-label="Your trip route"></div></div>
+
+<!-- Budget / days / distance breakdown -->
+<div id="breakdown" class="glass" style="padding:1rem;margin-top:1rem;display:none">
+  <div class="section-title" style="margin-top:0"><h2>Trip summary</h2><span class="sub" id="budget-flag"></span></div>
+  <div class="cards" style="grid-template-columns:repeat(auto-fill,minmax(150px,1fr))">
+    <div class="glass" style="padding:0.8rem"><div class="meta">Days</div><h3 id="s-days">–</h3></div>
+    <div class="glass" style="padding:0.8rem"><div class="meta">Distance</div><h3 id="s-dist">–</h3></div>
+    <div class="glass" style="padding:0.8rem"><div class="meta">Travel</div><h3 id="s-travel">–</h3></div>
+    <div class="glass" style="padding:0.8rem"><div class="meta">Entry / visits</div><h3 id="s-visit">–</h3></div>
+    <div class="glass" style="padding:0.8rem"><div class="meta">Stay + food</div><h3 id="s-stay">–</h3></div>
+    <div class="glass" style="padding:0.8rem"><div class="meta">Grand total</div><h3 id="s-total">–</h3></div>
+  </div>
+  <div id="route-list" class="meta" style="margin-top:0.8rem"></div>
+</div>
+
+<!-- Getting around -->
+<div id="transport-wrap" style="display:none">
+  <div class="section-title"><h2>Getting around</h2><span class="sub">cost · time · comfort</span></div>
+  <div class="cards" id="transport" style="grid-template-columns:repeat(auto-fill,minmax(200px,1fr))"></div>
+</div>
+
+<!-- Where to stay (fuzzy) -->
+<div id="stays-wrap" style="display:none">
+  <div class="section-title"><h2>Where to stay</h2><span class="sub" id="stays-sub"></span></div>
+  <div class="cards" id="stays"></div>
+</div>
+
+<!-- Similar trips -->
+<div id="similar-wrap" style="display:none">
+  <div class="section-title"><h2>Similar trips you'd enjoy</h2><span class="sub">based on your picks</span></div>
+  <div class="cards" id="similar"></div>
+</div>
+
+<div class="section-title"><h2>Or tap places to add</h2></div>
+<div class="cards" id="pick-grid">
+  {% for d in destinations %}
+    <label class="pcard" style="cursor:pointer">
+      {% if d.image_url %}<div class="ph"><img loading="lazy" src="{{ d.image_url }}" alt="" onerror="this.closest('.ph').remove()"></div>{% endif %}
+      <div class="scrim"></div>
+      <div class="body">
+        <input type="checkbox" class="pick" value="{{ d.id }}" style="width:auto"
+               {% if d.id in preselect %}checked{% endif %}>
+        <h3 style="display:inline"> {{ d.name }}</h3>
+        <div class="meta">{{ d.province.name }} · NPR {{ d.cost_npr }}</div>
+      </div>
+    </label>
+  {% endfor %}
+</div>
+
+{% include 'partials/slider.html' with slider_title="Dream a little" %}
+{% endblock %}
+
+{% block scripts %}
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script>window.CSRF_TOKEN = "{{ csrf_token }}";</script>
+  <script src="{% static 'js/vasatyayam.js' %}?v=7" defer></script>
+{% endblock %}
