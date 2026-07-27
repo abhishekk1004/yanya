@@ -1,6 +1,3 @@
-"""Admin registrations. DestinationCategory is edited inline on a destination
-so curators set the feature-vector weights right where they edit the place.
-"""
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as DjangoUserAdmin
 
@@ -8,11 +5,13 @@ from .models import (
     Category,
     Destination,
     DestinationCategory,
+    Hotel,
     Interaction,
     Itinerary,
     ItineraryStop,
     Profile,
     Province,
+    TransportMode,
     User,
     UserPreference,
 )
@@ -70,8 +69,20 @@ class ItineraryAdmin(admin.ModelAdmin):
     inlines = [ItineraryStopInline]
 
 
+@admin.register(Hotel)
+class HotelAdmin(admin.ModelAdmin):
+    list_display = ("name", "city", "province", "price_npr", "star_rating")
+    list_filter = ("province", "star_rating")
+    search_fields = ("name", "city")
+
+
+@admin.register(TransportMode)
+class TransportModeAdmin(admin.ModelAdmin):
+    list_display = ("name", "base_fare_npr", "per_km_npr", "speed_kmph", "comfort")
+
+
 admin.site.register(Profile)
 admin.site.register(UserPreference)
 
-# Category needs search enabled for the inline autocomplete above.
+
 CategoryAdmin.search_fields = ("key", "label")
