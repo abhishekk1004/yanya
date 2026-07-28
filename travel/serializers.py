@@ -10,6 +10,7 @@ from .constants import CATEGORY_KEYS
 from .media import icon_for
 from .models import (
     Destination,
+    Hotel,
     Interaction,
     Itinerary,
     ItineraryStop,
@@ -100,6 +101,15 @@ class _IconMixin:
         keys = [cw.category.key for cw in
                 sorted(obj.category_weights.all(), key=lambda c: c.weight, reverse=True)]
         return icon_for(obj.name, keys)
+
+
+class HotelSerializer(serializers.ModelSerializer):
+    province_name = serializers.CharField(source="province.name", read_only=True)
+
+    class Meta:
+        model = Hotel
+        fields = ("id", "name", "city", "province_name", "price_npr",
+                  "star_rating", "lat", "lng", "image_url")
 
 
 class InteractionSerializer(serializers.ModelSerializer):
