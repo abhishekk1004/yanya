@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+.pytest_cache/
+
+# Django
+*.log
+db.sqlite3
+/staticfiles/
+/media/
+
+# Env / secrets
+.env
+
+# Real province boundary files are large — add locally, don't commit.
+/data/*.geojson
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
