@@ -19,6 +19,7 @@ api_urlpatterns = [
          name="api-destination-interact"),
     path("recommendations", api.RecommendationsView.as_view(), name="api-recommendations"),
     path("geocode", api.GeocodeView.as_view(), name="api-geocode"),
+    path("hotels", api.HotelRecommendView.as_view(), name="api-hotels"),
     path("itineraries/optimize", api.ItineraryOptimizeView.as_view(),
          name="api-itinerary-optimize"),
     path("itineraries", api.ItineraryListCreateView.as_view(), name="api-itineraries"),
@@ -31,10 +32,14 @@ page_urlpatterns = [
     path("destinations/", views.destinations, name="destinations"),
     path("destinations/suggest/", views.destination_suggest, name="destination-suggest"),
     path("destinations/<int:pk>/save/", views.save_toggle, name="save-toggle"),
+    path("destinations/<int:pk>/rate/", views.rate_place, name="rate-place"),
     path("signup/", views.signup, name="signup"),
     path("quiz/", views.quiz, name="quiz"),
     path("profile/", views.profile, name="profile"),
     path("choices/", views.favourites, name="favourites"),
+    path("stays/", views.stays, name="stays"),
+    path("trips/", views.trips, name="trips"),
+    path("trips/<int:pk>/complete/", views.complete_trip, name="complete-trip"),
     path("vasatyayam/", views.vasatyayam, name="vasatyayam"),
 ]
 
