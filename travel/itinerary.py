@@ -2,7 +2,7 @@ from __future__ import annotations
 import math
 from dataclasses import dataclass, field
 
-COST_PER_KM = 15.0  
+COST_PER_KM = 22.0
 
 @dataclass
 class Point:
@@ -60,13 +60,14 @@ def nearest_neighbour(m: list[list[float]], start: int = 0) -> list[int]:
     return order
 
 
-def two_opt(order: list[int], m: list[list[float]]) -> list[int]:
+def two_opt(order: list[int], m: list[list[float]], fix_last: bool = False) -> list[int]:
     best = order[:]
     improved = True
     while improved:
         improved = False
+        k_stop = len(best) - 1 if fix_last else len(best)
         for i in range(1, len(best) - 1):
-            for k in range(i + 1, len(best)):
+            for k in range(i + 1, k_stop):
                 candidate = best[:i] + best[i : k + 1][::-1] + best[k + 1 :]
                 if _route_travel(candidate, m) + 1e-9 < _route_travel(best, m):
                     best = candidate
@@ -74,21 +75,41 @@ def two_opt(order: list[int], m: list[list[float]]) -> list[int]:
     return best
 
 
-def _optimise_order(points: list[Point], start_idx: int) -> list[int]:
+def _nn_path(m: list[list[float]], start: int, end: int) -> list[int]:
+
+    middle = [j for j in range(len(m)) if j not in (start, end)]
+    order = [start]
+    cur = start
+    unvisited = set(middle)
+    while unvisited:
+        nxt = min(unvisited, key=lambda j: m[cur][j])
+        order.append(nxt)
+        unvisited.discard(nxt)
+        cur = nxt
+    order.append(end)
+    return order
+
+
+def _optimise_order(points: list[Point], start_idx: int, end_idx: int | None = None) -> list[int]:
     m = cost_matrix(points)
-    return two_opt(nearest_neighbour(m, start_idx), m)
+    if end_idx is None:
+        return two_opt(nearest_neighbour(m, start_idx), m)
+    return two_opt(_nn_path(m, start_idx, end_idx), m, fix_last=True)
 
 
 def optimize(
-    points: list[Point], budget_npr: int | None = None, start_index: int = 0
+    points: list[Point], budget_npr: int | None = None, start_index: int = 0,
+    end_index: int | None = None,
 ) -> OptimizedRoute:
     working = points[:]
     start_id = points[start_index].id
+    end_id = points[end_index].id if end_index is not None else None
     dropped: list[int] = []
 
     def build(pts: list[Point]) -> tuple[list[int], list[list[float]], list[int]]:
         s = next(i for i, p in enumerate(pts) if p.id == start_id)
-        order_idx = _optimise_order(pts, s)
+        e = next((i for i, p in enumerate(pts) if p.id == end_id), None) if end_id is not None else None
+        order_idx = _optimise_order(pts, s, e)
         m = cost_matrix(pts)
         return order_idx, m, s
 
@@ -101,11 +122,10 @@ def optimize(
 
     travel, visits, total = totals(order_idx, m, working)
 
-
     while budget_npr is not None and total > budget_npr and len(working) > 1:
         best_removal, best_saving = None, -1.0
         for p in working:
-            if p.id == start_id:
+            if p.id == start_id or p.id == end_id:
                 continue
             trial = [q for q in working if q.id != p.id]
             oi, tm, _ = build(trial)
