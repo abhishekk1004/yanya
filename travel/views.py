@@ -5,14 +5,26 @@ from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.core.cache import cache
 from django.db.models import Prefetch
+from django.http import HttpResponseForbidden
 from django.shortcuts import get_object_or_404, redirect, render
+from django.utils import timezone
 from django.views.decorators.http import require_POST
 
+from .collaborative import collaborative_recommend, hybrid_recommend
 from .constants import CATEGORY_KEYS, CATEGORY_LABELS
 from .forms import SignupForm
+from .fuzzy import recommend_hotels
 from .media import GALLERY
-from .models import Category, Destination, DestinationCategory, Interaction, Province
-from .recommender import recommend, similar_destinations
+from .models import (
+    Category,
+    Destination,
+    DestinationCategory,
+    Hotel,
+    Interaction,
+    Itinerary,
+    Province,
+)
+from .recommender import similar_destinations
 
 _WEIGHTS_PREFETCH = Prefetch(
     "category_weights", queryset=DestinationCategory.objects.select_related("category")
@@ -42,18 +54,20 @@ def destinations(request):
         qs = qs.filter(name__icontains=q)
 
 
-    picked = []
+    picked, loved = [], []
     if request.user.is_authenticated and not (province or category or q):
-        picked = [s.destination for s in recommend(request.user, top_n=6)]
+        picked = [s.destination for s in hybrid_recommend(request.user, top_n=6)]
+        loved = [s.destination for s in collaborative_recommend(request.user, top_n=6)]
 
     grid = list(qs.order_by("-popularity", "name")[:60])
     saved = _saved_ids(request.user)
-    for d in grid + picked:
+    for d in grid + picked + loved:
         d.is_saved = d.id in saved
 
     context = {
         "destinations": grid,
         "picked": picked,
+        "travellers_loved": loved,
         "provinces": Province.objects.all(),
         "categories": Category.objects.all(),
         "selected": {"province": province, "category": category, "q": q},
@@ -95,9 +109,55 @@ def save_toggle(request, pk):
     else:
         Interaction.objects.create(user=request.user, destination=dest, event=Interaction.SAVE)
         saved = True
-    key = f"reco_ver:{request.user.id}"
-    cache.set(key, cache.get(key, 0) + 1)
+    _bump_reco(request.user.id)
     return render(request, "partials/save_button.html", {"d": dest, "saved": saved})
+
+
+def _bump_reco(user_id: int) -> None:
+    key = f"reco_ver:{user_id}"
+    cache.set(key, cache.get(key, 0) + 1)
+
+
+def _user_ratings(user) -> dict[int, int]:
+    if not user.is_authenticated:
+        return {}
+    out: dict[int, int] = {}
+    for it in (
+        Interaction.objects.filter(
+            user=user, event=Interaction.RATE, rating__isnull=False
+        ).order_by("created_at").values("destination_id", "rating")
+    ):
+        out[it["destination_id"]] = it["rating"] 
+    return out
+
+
+def _can_rate(user, dest) -> bool:
+    return Itinerary.objects.filter(
+        user=user, completed=True, stops__destination=dest
+    ).exists()
+
+
+@login_required
+@require_POST
+def rate_place(request, pk):
+
+    dest = get_object_or_404(Destination, pk=pk)
+    if not _can_rate(request.user, dest):
+        return HttpResponseForbidden("Finish a trip with this place before rating it.")
+    try:
+        stars = int(request.POST.get("stars", 0))
+    except (TypeError, ValueError):
+        stars = 0
+    stars = stars if 1 <= stars <= 5 else 0
+    Interaction.objects.filter(
+        user=request.user, destination=dest, event=Interaction.RATE
+    ).delete()
+    if stars:
+        Interaction.objects.create(
+            user=request.user, destination=dest, event=Interaction.RATE, rating=stars
+        )
+    _bump_reco(request.user.id)
+    return render(request, "partials/rate_stars.html", {"d": dest, "rating": stars})
 
 
 
@@ -163,6 +223,50 @@ def favourites(request):
     for d in also:
         d.is_saved = d.id in saved_set
     return render(request, "favourites.html", {"saved": saved, "also_like": also})
+
+
+def stays(request):
+    province = request.GET.get("province", "")
+    try:
+        budget = int(request.GET.get("budget", 6000))
+    except (TypeError, ValueError):
+        budget = 6000
+    hotels = Hotel.objects.select_related("province")
+    if province:
+        hotels = hotels.filter(province__slug=province)
+    ranked = recommend_hotels(list(hotels), budget)
+    for hs in ranked:              # attach score to the hotel for the template
+        hs.hotel.fuzzy_score = hs.score
+    return render(request, "stays.html", {
+        "hotels": [hs.hotel for hs in ranked],
+        "provinces": Province.objects.all(),
+        "selected": {"province": province, "budget": budget},
+    })
+
+
+@login_required
+def trips(request):
+    ratings = _user_ratings(request.user)
+    trips_qs = (
+        Itinerary.objects.filter(user=request.user)
+        .prefetch_related("stops__destination__province")
+    )
+    trip_list = list(trips_qs)
+    for trip in trip_list:
+        for stop in trip.stops.all():
+            stop.destination.user_rating = ratings.get(stop.destination_id, 0)
+    return render(request, "trips.html", {"trips": trip_list})
+
+
+@login_required
+@require_POST
+def complete_trip(request, pk):
+    trip = get_object_or_404(Itinerary, pk=pk, user=request.user)
+    if not trip.completed:
+        trip.completed = True
+        trip.completed_at = timezone.now()
+        trip.save(update_fields=["completed", "completed_at"])
+    return redirect("trips")
 
 
 @login_required
