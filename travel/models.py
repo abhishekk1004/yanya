@@ -77,6 +77,7 @@ class Province(models.Model):
     center_lat = models.FloatField(default=28.0)
     center_lng = models.FloatField(default=84.0)
     boundary_geojson = models.JSONField(null=True, blank=True)
+    cover_url = models.URLField(blank=True)  
 
     class Meta:
         ordering = ["order", "name"]
@@ -112,12 +113,13 @@ class Destination(models.Model):
     best_season = models.CharField(
         max_length=10, choices=SEASON_CHOICES, default="all"
     )
-    # Popularity score, refreshed nightly by Celery.
+
     popularity = models.FloatField(default=0.0)
     categories = models.ManyToManyField(
         Category, through="DestinationCategory", related_name="destinations"
     )
     is_featured = models.BooleanField(default=False)
+    image_url = models.URLField(blank=True)  
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -143,7 +145,7 @@ class DestinationCategory(models.Model):
         return f"{self.destination}·{self.category}={self.weight:.2f}"
 
 
-# --- Behaviour -------------------------------------------------------------
+
 class Interaction(models.Model):
 
     VIEW = "view"
@@ -164,7 +166,7 @@ class Interaction(models.Model):
         Destination, on_delete=models.CASCADE, related_name="interactions"
     )
     event = models.CharField(max_length=10, choices=EVENT_CHOICES)
-    rating = models.PositiveSmallIntegerField(null=True, blank=True)  # 1–5 if RATE
+    rating = models.PositiveSmallIntegerField(null=True, blank=True)  
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -184,6 +186,8 @@ class Itinerary(models.Model):
     name = models.CharField(max_length=120, default="My trip")
     budget_npr = models.PositiveIntegerField(default=50000)
     total_cost_npr = models.PositiveIntegerField(default=0)
+    completed = models.BooleanField(default=False)
+    completed_at = models.DateTimeField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
@@ -200,7 +204,7 @@ class ItineraryStop(models.Model):
     )
     destination = models.ForeignKey(Destination, on_delete=models.CASCADE)
     order = models.PositiveSmallIntegerField(default=0)
-    leg_cost_npr = models.PositiveIntegerField(default=0)  # travel cost to reach
+    leg_cost_npr = models.PositiveIntegerField(default=0) 
 
     class Meta:
         ordering = ["order"]
@@ -208,3 +212,45 @@ class ItineraryStop(models.Model):
 
     def __str__(self) -> str:
         return f"{self.itinerary.name}#{self.order}:{self.destination}"
+
+
+
+class Hotel(models.Model):
+    """A place to stay. Recommended per province/budget by a fuzzy-logic engine
+    over (price affordability, star rating)."""
+
+    name = models.CharField(max_length=120)
+    province = models.ForeignKey(
+        Province, on_delete=models.CASCADE, related_name="hotels"
+    )
+    city = models.CharField(max_length=80, blank=True)
+    price_npr = models.PositiveIntegerField(default=4000)  # per night
+    star_rating = models.FloatField(default=3.0)           # 1.0–5.0
+    lat = models.FloatField(default=28.0)
+    lng = models.FloatField(default=84.0)
+    image_url = models.URLField(blank=True)
+
+    class Meta:
+        ordering = ["-star_rating", "price_npr"]
+
+    def __str__(self) -> str:
+        return f"{self.name} ({self.city or self.province.name})"
+
+
+class TransportMode(models.Model):
+    """A way to travel between places. Cost = base_fare + per_km × distance;
+    time = distance / speed. Recommended by a cost/time/comfort utility score."""
+
+    name = models.CharField(max_length=60)            
+    emoji = models.CharField(max_length=8, default="🚌")
+    base_fare_npr = models.PositiveIntegerField(default=0)
+    per_km_npr = models.FloatField(default=10.0)
+    speed_kmph = models.FloatField(default=40.0)
+    comfort = models.PositiveSmallIntegerField(default=3)  
+    min_km = models.FloatField(default=0)                  
+
+    class Meta:
+        ordering = ["per_km_npr"]
+
+    def __str__(self) -> str:
+        return self.name
